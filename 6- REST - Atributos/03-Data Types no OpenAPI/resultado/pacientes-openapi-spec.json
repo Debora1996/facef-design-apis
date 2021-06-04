@@ -1,0 +1,178 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Pacientes",
+        "version": "1.0.0",
+        "description": "ProHealth - Contrato da API de Pacientes"
+    },
+    "paths": {
+        "/patients": {
+            "description": "Este recurso é a representação dos pacientes que precisam de atendimento médico e, para isso, solicitam marcação de consultas a partir do controle de agendamento da clínica",
+            "get": {
+                "summary": "Consulta de pacientes",
+                "description": "Operação utilizada para consultar todos os pacientes da clínica"
+            },
+            "put": {
+                "summary": "Atualização de pacientes",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            },
+            "post": {
+                "summary": "Criação de pacientes",
+                "description": "Operação utilizada para cadastrar novos pacientes da clínica"
+            },
+            "delete": {
+                "summary": "Remoção de pacientes",
+                "description": "Operação utilizada para apagar pacientes do cadastro da clínica"
+            },
+            "patch": {
+                "summary": "Atualização de pacientes",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            }
+        },
+        "/patients/{id}": {
+            "description": "Este recurso é a representação de cada paciente que precisa de atendimento médico e, para isso, solicita marcação de consultas a partir do controle de agendamento da clínica",
+            "get": {
+                "summary": "Consulta de dados de um paciente",
+                "description": "Operação utilizada para consultar dados de pacientes da clínica"
+            },
+            "put": {
+                "summary": "Atualização de dados de um paciente",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            },
+            "post": {
+                "summary": "Criação de pacientes",
+                "description": "Operação utilizada para cadastrar novos pacientes da clínica"
+            },
+            "delete": {
+                "summary": "Remoção de pacientes",
+                "description": "Operação utilizada para apagar um paciente do cadastro da clínica"
+            },
+            "patch": {
+                "summary": "Atualização de dados de um paciente",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "MedicalInsurance": {
+                "description": "Objeto que representa o plano de saúde de um paciente",
+                "required": [
+                    "id",
+                    "operator_code"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código de inscrição do paciente na sua operadora de plano de saúde",
+                        "type": "string"
+                    },
+                    "operator_code": {
+                        "description": "Código da operadora de plano de saúde na qual o paciente está inscrito",
+                        "type": "string"
+                    }
+                }
+            },
+            "Address": {
+                "description": "Objeto que representa o endereço residencial do paciente",
+                "required": [
+                    "street",
+                    "district",
+                    "city",
+                    "state",
+                    "zipcode"
+                ],
+                "type": "object",
+                "properties": {
+                    "street": {
+                        "description": "Nome da rua onde o paciente reside",
+                        "type": "string"
+                    },
+                    "complement": {
+                        "description": "Complemento do endereço (ex: apartamento, bloco, etc)",
+                        "type": "string"
+                    },
+                    "district": {
+                        "description": "Nome do bairro",
+                        "type": "string"
+                    },
+                    "city": {
+                        "description": "Nome da cidade",
+                        "type": "string"
+                    },
+                    "state": {
+                        "description": "Nome do estado",
+                        "type": "string"
+                    },
+                    "zipcode": {
+                        "description": "Código postal - CEP",
+                        "type": "string"
+                    }
+                }
+            },
+            "Patient": {
+                "description": "Objeto que representa um paciente da clínica",
+                "required": [
+                    "id",
+                    "name",
+                    "cpf",
+                    "phone_number",
+                    "birthdate",
+                    "height",
+                    "weight",
+                    "address"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código único identificador do paciente",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Nome completo do paciente",
+                        "type": "string"
+                    },
+                    "cpf": {
+                        "description": "Documento de identificação do paciente - CPF",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "Número de telefone do paciente para contato",
+                        "type": "string"
+                    },
+                    "birthdate": {
+                        "description": "Data de nascimento do paciente",
+                        "type": "string"
+                    },
+                    "height": {
+                        "description": "Altura do paciente",
+                        "type": "number"
+                    },
+                    "weight": {
+                        "description": "Peso do paciente",
+                        "type": "integer"
+                    },
+                    "smoker": {
+                        "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
+                        "type": "boolean"
+                    },
+                    "comorbidities": {
+                        "description": "Lista de comorbidades que afetam o paciente (caso tenha)",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "medical_insurance": {
+                        "$ref": "#/components/schemas/MedicalInsurance",
+                        "description": "Plano de saúde na qual o paciente está inscrito"
+                    },
+                    "address": {
+                        "$ref": "#/components/schemas/Address",
+                        "description": "Endereço residencial do paciente | Required"
+                    }
+                }
+            }
+        }
+    }
+}

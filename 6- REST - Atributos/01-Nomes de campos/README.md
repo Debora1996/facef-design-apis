@@ -1,4 +1,4 @@
-# Verbos HTTP
+# Nomes de campos
 
 ## Atividade 1 - Definição de nomes para campos da entidade Pacientes
 
