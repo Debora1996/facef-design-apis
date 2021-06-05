@@ -138,7 +138,7 @@ A partir do Apicurito:
 ## Atividade 5 - Configuração do response de sucesso para PATCH /patients/{id}
 
 * Na parte esquerda da tela, na seção PATHS, clique no path /patients/{id}
-* Na parte direita da tela, certifique-se que a operação PUT esteja selecionada
+* Na parte direita da tela, certifique-se que a operação PATCH esteja selecionada
 * Na seção RESPONSES, clique em `Add a response`
 * Mantenha o código `200 OK` e clique em `Add`
 * No campo Description, preencha: `Response para atualização dos dados de um pacientes`
@@ -176,7 +176,7 @@ A partir do Apicurito:
 ## Atividade 6 - Configuração do response de sucesso para DELETE /patients/{id}
 
 * Na parte esquerda da tela, na seção PATHS, clique no path /patients/{id}
-* Na parte direita da tela, certifique-se que a operação PUT esteja selecionada
+* Na parte direita da tela, certifique-se que a operação DELETE esteja selecionada
 * Na seção RESPONSES, clique em `Add a response`
 * Mantenha o código `204 No Content` e clique em `Add`
-* No campo Description, preencha: `Response para remoção de um pacientes`
+* No campo Description, preencha: `Response para remoção de um paciente`

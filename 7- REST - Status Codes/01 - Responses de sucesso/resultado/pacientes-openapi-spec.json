@@ -1,0 +1,814 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Pacientes",
+        "version": "1.0.0",
+        "description": "ProHealth - Contrato da API de Pacientes"
+    },
+    "paths": {
+        "/patients": {
+            "description": "Este recurso é a representação dos pacientes que precisam de atendimento médico e, para isso, solicitam marcação de consultas a partir do controle de agendamento da clínica",
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PatientsResponseList"
+                                },
+                                "examples": {
+                                    "PatientsResponseListExample": {
+                                        "value": {
+                                            "id": "324.5231100.3432",
+                                            "operator_code": "AMIL"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para listagem de pacientes"
+                    }
+                },
+                "summary": "Consulta de pacientes",
+                "description": "Operação utilizada para consultar todos os pacientes da clínica"
+            },
+            "put": {
+                "summary": "Atualização de pacientes",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            },
+            "post": {
+                "requestBody": {
+                    "description": "Request para criação de pacientes",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PatientsRequest"
+                            },
+                            "examples": {
+                                "PatientsRequestExample": {
+                                    "value": {
+                                        "name": "Peter Parker",
+                                        "cpf": "123.789.012-34",
+                                        "phone_number": "1691234-5789",
+                                        "birthdate": "2001-08-10",
+                                        "height": 1.78,
+                                        "weight": 76,
+                                        "smoker": false,
+                                        "comorbidities": [
+                                            "Cirrose hepática",
+                                            "Valvopatia"
+                                        ],
+                                        "medical_insurance": {
+                                            "id": "324.5231100.3432",
+                                            "operator_code": "AMIL"
+                                        },
+                                        "address": {
+                                            "street": "Rua Luis Gois, 1200",
+                                            "complement": "apto 204",
+                                            "district": "Vila Mariana",
+                                            "city": "São Paulo",
+                                            "state": "SP",
+                                            "zipcode": "04043-050"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PatientsResponse"
+                                },
+                                "examples": {
+                                    "PatientsResponseExample": {
+                                        "value": {
+                                            "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
+                                            "name": "Peter Parker",
+                                            "cpf": "123.789.012-34",
+                                            "phone_number": "1691234-5789",
+                                            "birthdate": "2001-08-10",
+                                            "height": 1.78,
+                                            "weight": 76,
+                                            "smoker": false,
+                                            "comorbidities": [
+                                                "Cirrose hepática",
+                                                "Valvopatia"
+                                            ],
+                                            "medical_insurance": {
+                                                "id": "324.5231100.3432",
+                                                "operator_code": "AMIL"
+                                            },
+                                            "address": {
+                                                "street": "Rua Luis Gois, 1200",
+                                                "complement": "apto 204",
+                                                "district": "Vila Mariana",
+                                                "city": "São Paulo",
+                                                "state": "SP",
+                                                "zipcode": "04043-050"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para criação de pacientes"
+                    }
+                },
+                "summary": "Criação de pacientes",
+                "description": "Operação utilizada para cadastrar novos pacientes da clínica"
+            },
+            "delete": {
+                "summary": "Remoção de pacientes",
+                "description": "Operação utilizada para apagar pacientes do cadastro da clínica"
+            },
+            "patch": {
+                "summary": "Atualização de pacientes",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            }
+        },
+        "/patients/{id}": {
+            "description": "Este recurso é a representação de cada paciente que precisa de atendimento médico e, para isso, solicita marcação de consultas a partir do controle de agendamento da clínica",
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PatientsResponse"
+                                },
+                                "examples": {
+                                    "PatientsResponseExample": {
+                                        "value": {
+                                            "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
+                                            "name": "Peter Parker",
+                                            "cpf": "123.789.012-34",
+                                            "phone_number": "1691234-5789",
+                                            "birthdate": "2001-08-10",
+                                            "height": 1.78,
+                                            "weight": 76,
+                                            "smoker": false,
+                                            "comorbidities": [
+                                                "Cirrose hepática",
+                                                "Valvopatia"
+                                            ],
+                                            "medical_insurance": {
+                                                "id": "324.5231100.3432",
+                                                "operator_code": "AMIL"
+                                            },
+                                            "address": {
+                                                "street": "Rua Luis Gois, 1200",
+                                                "complement": "apto 204",
+                                                "district": "Vila Mariana",
+                                                "city": "São Paulo",
+                                                "state": "SP",
+                                                "zipcode": "04043-050"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para consulta dos dados de um pacientes"
+                    }
+                },
+                "summary": "Consulta de dados de um paciente",
+                "description": "Operação utilizada para consultar dados de pacientes da clínica"
+            },
+            "put": {
+                "requestBody": {
+                    "description": "Request para atualização de pacientes",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PatientsRequest"
+                            },
+                            "examples": {
+                                "PatientsRequestExample": {
+                                    "value": {
+                                        "name": "Peter Parker",
+                                        "cpf": "123.789.012-34",
+                                        "phone_number": "1691234-5789",
+                                        "birthdate": "2001-08-10",
+                                        "height": 1.78,
+                                        "weight": 76,
+                                        "smoker": false,
+                                        "comorbidities": [
+                                            "Cirrose hepática",
+                                            "Valvopatia"
+                                        ],
+                                        "medical_insurance": {
+                                            "id": "324.5231100.3432",
+                                            "operator_code": "AMIL"
+                                        },
+                                        "address": {
+                                            "street": "Rua Luis Gois, 1200",
+                                            "complement": "apto 204",
+                                            "district": "Vila Mariana",
+                                            "city": "São Paulo",
+                                            "state": "SP",
+                                            "zipcode": "04043-050"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PatientsResponse"
+                                },
+                                "examples": {
+                                    "PatientsResponseExample": {
+                                        "value": {
+                                            "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
+                                            "name": "Peter Parker",
+                                            "cpf": "123.789.012-34",
+                                            "phone_number": "1691234-5789",
+                                            "birthdate": "2001-08-10",
+                                            "height": 1.78,
+                                            "weight": 76,
+                                            "smoker": false,
+                                            "comorbidities": [
+                                                "Cirrose hepática",
+                                                "Valvopatia"
+                                            ],
+                                            "medical_insurance": {
+                                                "id": "324.5231100.3432",
+                                                "operator_code": "AMIL"
+                                            },
+                                            "address": {
+                                                "street": "Rua Luis Gois, 1200",
+                                                "complement": "apto 204",
+                                                "district": "Vila Mariana",
+                                                "city": "São Paulo",
+                                                "state": "SP",
+                                                "zipcode": "04043-050"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para atualização dos dados de um pacientes"
+                    }
+                },
+                "summary": "Atualização de dados de um paciente",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            },
+            "post": {
+                "summary": "Criação de pacientes",
+                "description": "Operação utilizada para cadastrar novos pacientes da clínica"
+            },
+            "delete": {
+                "responses": {
+                    "204": {
+                        "description": "Response para remoção de um paciente"
+                    }
+                },
+                "summary": "Remoção de pacientes",
+                "description": "Operação utilizada para apagar um paciente do cadastro da clínica"
+            },
+            "patch": {
+                "requestBody": {
+                    "description": "Request para atualização de pacientes",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PatientsRequestPatch"
+                            },
+                            "examples": {
+                                "PatientsRequestExample": {
+                                    "value": {
+                                        "name": "Peter Parker",
+                                        "cpf": "123.789.012-34",
+                                        "phone_number": "1691234-5789",
+                                        "birthdate": "2001-08-10",
+                                        "height": 1.78,
+                                        "weight": 76,
+                                        "smoker": false,
+                                        "comorbidities": [
+                                            "Cirrose hepática",
+                                            "Valvopatia"
+                                        ],
+                                        "medical_insurance": {
+                                            "id": "324.5231100.3432",
+                                            "operator_code": "AMIL"
+                                        },
+                                        "address": {
+                                            "street": "Rua Luis Gois, 1200",
+                                            "complement": "apto 204",
+                                            "district": "Vila Mariana",
+                                            "city": "São Paulo",
+                                            "state": "SP",
+                                            "zipcode": "04043-050"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PatientsResponse"
+                                },
+                                "examples": {
+                                    "PatientsResponseExample": {
+                                        "value": {
+                                            "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
+                                            "name": "Peter Parker",
+                                            "cpf": "123.789.012-34",
+                                            "phone_number": "1691234-5789",
+                                            "birthdate": "2001-08-10",
+                                            "height": 1.78,
+                                            "weight": 76,
+                                            "smoker": false,
+                                            "comorbidities": [
+                                                "Cirrose hepática",
+                                                "Valvopatia"
+                                            ],
+                                            "medical_insurance": {
+                                                "id": "324.5231100.3432",
+                                                "operator_code": "AMIL"
+                                            },
+                                            "address": {
+                                                "street": "Rua Luis Gois, 1200",
+                                                "complement": "apto 204",
+                                                "district": "Vila Mariana",
+                                                "city": "São Paulo",
+                                                "state": "SP",
+                                                "zipcode": "04043-050"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para atualização dos dados de um pacientes"
+                    }
+                },
+                "summary": "Atualização de dados de um paciente",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "MedicalInsurance": {
+                "title": "Root Type for MedicalInsurance",
+                "description": "Objeto que representa o plano de saúde de um paciente",
+                "required": [
+                    "id",
+                    "operator_code"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código de inscrição do paciente na sua operadora de plano de saúde",
+                        "type": "string"
+                    },
+                    "operator_code": {
+                        "description": "Código da operadora de plano de saúde na qual o paciente está inscrito",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": "324.5231100.3432",
+                    "operator_code": "AMIL"
+                }
+            },
+            "Address": {
+                "title": "Root Type for Address",
+                "description": "Objeto que representa o endereço residencial do paciente",
+                "required": [
+                    "city",
+                    "district",
+                    "state",
+                    "street",
+                    "zipcode"
+                ],
+                "type": "object",
+                "properties": {
+                    "street": {
+                        "description": "Nome da rua onde o paciente reside",
+                        "type": "string"
+                    },
+                    "complement": {
+                        "description": "Complemento do endereço (ex: apartamento, bloco, etc)",
+                        "type": "string"
+                    },
+                    "district": {
+                        "description": "Nome do bairro",
+                        "type": "string"
+                    },
+                    "city": {
+                        "description": "Nome da cidade",
+                        "type": "string"
+                    },
+                    "state": {
+                        "description": "Nome do estado",
+                        "type": "string"
+                    },
+                    "zipcode": {
+                        "description": "Código postal - CEP",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "street": "Rua Luis Gois, 1200",
+                    "complement": "apto 204",
+                    "district": "Vila Mariana",
+                    "city": "São Paulo",
+                    "state": "SP",
+                    "zipcode": "04043-050"
+                }
+            },
+            "PatientsResponse": {
+                "title": "Root Type for PatientsResponse",
+                "description": "Representa um paciente da clínica - utilizado no response da consulta do objeto de instância",
+                "required": [
+                    "address",
+                    "birthdate",
+                    "cpf",
+                    "height",
+                    "id",
+                    "name",
+                    "phone_number",
+                    "weight"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código único identificador do paciente",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Nome completo do paciente",
+                        "type": "string"
+                    },
+                    "cpf": {
+                        "description": "Documento de identificação do paciente - CPF",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "Número de telefone do paciente para contato",
+                        "type": "string"
+                    },
+                    "birthdate": {
+                        "format": "date",
+                        "description": "Data de nascimento do paciente",
+                        "type": "string"
+                    },
+                    "height": {
+                        "format": "double",
+                        "description": "Altura do paciente",
+                        "type": "number"
+                    },
+                    "weight": {
+                        "format": "int32",
+                        "description": "Peso do paciente",
+                        "type": "integer"
+                    },
+                    "smoker": {
+                        "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
+                        "type": "boolean"
+                    },
+                    "comorbidities": {
+                        "description": "Lista de comorbidades que afetam o paciente (caso tenha)",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "medical_insurance": {
+                        "$ref": "#/components/schemas/MedicalInsurance",
+                        "description": "Plano de saúde na qual o paciente está inscrito",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "operator_code": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "address": {
+                        "$ref": "#/components/schemas/Address",
+                        "description": "Endereço residencial do paciente",
+                        "properties": {
+                            "street": {
+                                "type": "string"
+                            },
+                            "complement": {
+                                "type": "string"
+                            },
+                            "district": {
+                                "type": "string"
+                            },
+                            "city": {
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string"
+                            },
+                            "zipcode": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "example": {
+                    "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
+                    "name": "Peter Parker",
+                    "cpf": "123.789.012-34",
+                    "phone_number": "1691234-5789",
+                    "birthdate": "2001-08-10",
+                    "height": 1.78,
+                    "weight": 76,
+                    "smoker": false,
+                    "comorbidities": [
+                        "Cirrose hepática",
+                        "Valvopatia"
+                    ],
+                    "medical_insurance": {
+                        "id": "324.5231100.3432",
+                        "operator_code": "AMIL"
+                    },
+                    "address": {
+                        "street": "Rua Luis Gois, 1200",
+                        "complement": "apto 204",
+                        "district": "Vila Mariana",
+                        "city": "São Paulo",
+                        "state": "SP",
+                        "zipcode": "04043-050"
+                    }
+                }
+            },
+            "PatientsRequest": {
+                "title": "Root Type for PatientsResponse",
+                "description": "Representa um paciente da clínica - utilizado no request da consulta do objeto de instância",
+                "required": [
+                    "address",
+                    "birthdate",
+                    "cpf",
+                    "height",
+                    "name",
+                    "phone_number",
+                    "weight"
+                ],
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "Nome completo do paciente",
+                        "type": "string"
+                    },
+                    "cpf": {
+                        "description": "Documento de identificação do paciente - CPF",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "Número de telefone do paciente para contato",
+                        "type": "string"
+                    },
+                    "birthdate": {
+                        "format": "date",
+                        "description": "Data de nascimento do paciente",
+                        "type": "string"
+                    },
+                    "height": {
+                        "format": "double",
+                        "description": "Altura do paciente",
+                        "type": "number"
+                    },
+                    "weight": {
+                        "format": "int32",
+                        "description": "Peso do paciente",
+                        "type": "integer"
+                    },
+                    "smoker": {
+                        "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
+                        "type": "boolean"
+                    },
+                    "comorbidities": {
+                        "description": "Lista de comorbidades que afetam o paciente (caso tenha)",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "medical_insurance": {
+                        "$ref": "#/components/schemas/MedicalInsurance",
+                        "description": "Plano de saúde na qual o paciente está inscrito",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "operator_code": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "address": {
+                        "$ref": "#/components/schemas/Address",
+                        "description": "Endereço residencial do paciente",
+                        "properties": {
+                            "street": {
+                                "type": "string"
+                            },
+                            "complement": {
+                                "type": "string"
+                            },
+                            "district": {
+                                "type": "string"
+                            },
+                            "city": {
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string"
+                            },
+                            "zipcode": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "example": {
+                    "name": "Peter Parker",
+                    "cpf": "123.789.012-34",
+                    "phone_number": "1691234-5789",
+                    "birthdate": "2001-08-10",
+                    "height": 1.78,
+                    "weight": 76,
+                    "smoker": false,
+                    "comorbidities": [
+                        "Cirrose hepática",
+                        "Valvopatia"
+                    ],
+                    "medical_insurance": {
+                        "id": "324.5231100.3432",
+                        "operator_code": "AMIL"
+                    },
+                    "address": {
+                        "street": "Rua Luis Gois, 1200",
+                        "complement": "apto 204",
+                        "district": "Vila Mariana",
+                        "city": "São Paulo",
+                        "state": "SP",
+                        "zipcode": "04043-050"
+                    }
+                }
+            },
+            "PatientsResponseList": {
+                "title": "Root Type for PatientsResponse",
+                "description": "Representa um paciente da clínica - utilizado no request da consulta do objeto de coleção",
+                "required": [
+                    "cpf",
+                    "id",
+                    "name"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código único identificador do paciente",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Nome completo do paciente",
+                        "type": "string"
+                    },
+                    "cpf": {
+                        "description": "Documento de identificação do paciente - CPF",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
+                    "name": "Peter Parker",
+                    "cpf": "123.789.012-34"
+                }
+            },
+            "PatientsRequestPatch": {
+                "title": "Root Type for PatientsResponse",
+                "description": "Representa um paciente da clínica - utilizado no request da consulta do objeto de instância (específico para operação PATCH)",
+                "required": [],
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "Nome completo do paciente",
+                        "type": "string"
+                    },
+                    "cpf": {
+                        "description": "Documento de identificação do paciente - CPF",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "Número de telefone do paciente para contato",
+                        "type": "string"
+                    },
+                    "birthdate": {
+                        "format": "date",
+                        "description": "Data de nascimento do paciente",
+                        "type": "string"
+                    },
+                    "height": {
+                        "format": "double",
+                        "description": "Altura do paciente",
+                        "type": "number"
+                    },
+                    "weight": {
+                        "format": "int32",
+                        "description": "Peso do paciente",
+                        "type": "integer"
+                    },
+                    "smoker": {
+                        "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
+                        "type": "boolean"
+                    },
+                    "comorbidities": {
+                        "description": "Lista de comorbidades que afetam o paciente (caso tenha)",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "medical_insurance": {
+                        "$ref": "#/components/schemas/MedicalInsurance",
+                        "description": "Plano de saúde na qual o paciente está inscrito",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "operator_code": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "address": {
+                        "$ref": "#/components/schemas/Address",
+                        "description": "Endereço residencial do paciente",
+                        "properties": {
+                            "street": {
+                                "type": "string"
+                            },
+                            "complement": {
+                                "type": "string"
+                            },
+                            "district": {
+                                "type": "string"
+                            },
+                            "city": {
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string"
+                            },
+                            "zipcode": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "example": {
+                    "name": "Peter Parker",
+                    "cpf": "123.789.012-34",
+                    "phone_number": "1691234-5789",
+                    "birthdate": "2001-08-10",
+                    "height": 1.78,
+                    "weight": 76,
+                    "smoker": false,
+                    "comorbidities": [
+                        "Cirrose hepática",
+                        "Valvopatia"
+                    ],
+                    "medical_insurance": {
+                        "id": "324.5231100.3432",
+                        "operator_code": "AMIL"
+                    },
+                    "address": {
+                        "street": "Rua Luis Gois, 1200",
+                        "complement": "apto 204",
+                        "district": "Vila Mariana",
+                        "city": "São Paulo",
+                        "state": "SP",
+                        "zipcode": "04043-050"
+                    }
+                }
+            }
+        }
+    }
+}
