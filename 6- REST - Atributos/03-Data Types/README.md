@@ -19,7 +19,7 @@ Na parte à esquerda da tela, na seção Data Types, clique em `Add a data type`
 
 Na parte à direita da tela, na seção PROPERTIES:
 * Repita os passos para cada item da tabela abaixo:
-* Ppreencha os campos Description, Obrigatoriedade e Tipo
+* Preencha os campos Description, Obrigatoriedade e Tipo
 
 Nome | Descrição | Obrigatoriedade | Tipo
 ------|--------|--------|--------
