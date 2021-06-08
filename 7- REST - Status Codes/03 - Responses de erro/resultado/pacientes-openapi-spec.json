@@ -476,6 +476,17 @@
         "/patients/{id}": {
             "description": "Este recurso é a representação de cada paciente que precisa de atendimento médico e, para isso, solicita marcação de consultas a partir do controle de agendamento da clínica",
             "get": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "Campo identificador da entidade Pacientes",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "content": {
@@ -695,6 +706,17 @@
                     },
                     "required": true
                 },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "Campo identificador da entidade Pacientes",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "content": {
@@ -932,6 +954,17 @@
                 "description": "Operação utilizada para atualizar dados de pacientes da clínica"
             },
             "post": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "Campo identificador da entidade Pacientes",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "405": {
                         "content": {
@@ -956,6 +989,17 @@
                 "description": "Operação utilizada para cadastrar novos pacientes da clínica"
             },
             "delete": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "Campo identificador da entidade Pacientes",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "204": {
                         "description": "Response para remoção de um paciente"
@@ -1138,6 +1182,17 @@
                     },
                     "required": true
                 },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "Campo identificador da entidade Pacientes",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "content": {
