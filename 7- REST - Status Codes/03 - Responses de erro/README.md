@@ -2,7 +2,7 @@
 
 A partir do Apicurito:
 
-## Configuração do responses de erro 405 para operações não-permitidas
+## Atividade 1 - Configuração do responses de erro 405 para operações não-permitidas
 
 Siga o procedimento abaixo para as operações seguintes:
 ```
@@ -30,7 +30,7 @@ POST /patients/{id}
 }
 ```
 
-### Atividade 2 - Configuração do response de erro para demais operações
+## Atividade 2 - Configuração do response de erro para demais operações
 
 Repetir os mesmos procedimentos da atividade anterior, dessa vez configurando os responses abaixo para as seguintes rotas:
 
