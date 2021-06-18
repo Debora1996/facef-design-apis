@@ -1,0 +1,145 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Consultas",
+        "version": "1.0.0",
+        "description": "A brand new API with no content.  Go nuts!"
+    },
+    "paths": {
+        "/v1/appointments": {
+            "summary": "Este recurso é a representação das consultas marcadas na clínica"
+        },
+        "/v1/appointments/{id}": {
+            "description": "Este recurso é a representação de cada consulta marcada a partir do controle de agendamento da clínica"
+        }
+    },
+    "components": {
+        "schemas": {
+            "Patient": {
+                "title": "Root Type for Patient",
+                "description": "Objeto que representa um paciente da clínica",
+                "required": [
+                    "id",
+                    "phone_number",
+                    "name"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código identificador do paciente",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Nome do paciente",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "Número de telefone do paciente",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": "503",
+                    "name": "Marcio Andrade",
+                    "phone_number": "92233-4394"
+                }
+            },
+            "Doctor": {
+                "title": "Root Type for Doctor",
+                "description": "Objeto que representa um médico da clínica",
+                "required": [
+                    "id",
+                    "name",
+                    "phone_number"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código identificador do médico",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Nome completo do médico",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "Número de telefone do médico",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": "25",
+                    "name": " ngelo Calafiori ",
+                    "phone_number": "91502-5501"
+                }
+            },
+            "AppointmentResponse": {
+                "title": "Root Type for AppointmentResponse",
+                "description": "Objeto que representa uma consulta marcada",
+                "required": [
+                    "doctor",
+                    "patient",
+                    "scheduled_at",
+                    "id"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "format": "int32",
+                        "description": "Código identificador da consulta",
+                        "type": "integer"
+                    },
+                    "scheduled_at": {
+                        "format": "date-time",
+                        "description": "Data/hora agendada para a consulta",
+                        "type": "string"
+                    },
+                    "patient": {
+                        "$ref": "#/components/schemas/Patient",
+                        "description": "Paciente atendido na consulta",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "phone_number": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "doctor": {
+                        "$ref": "#/components/schemas/Doctor",
+                        "description": "Médico que atende a consulta",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "phone_number": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "example": {
+                    "id": 8201,
+                    "scheduled_at": "2020-12-23T07:23:00Z",
+                    "patient": {
+                        "id": "503",
+                        "name": "Marcio Andrade",
+                        "phone_number": "92233-4394"
+                    },
+                    "doctor": {
+                        "id": "25",
+                        "name": " ngelo Calafiori ",
+                        "phone_number": "91502-5501"
+                    }
+                }
+            }
+        }
+    }
+}

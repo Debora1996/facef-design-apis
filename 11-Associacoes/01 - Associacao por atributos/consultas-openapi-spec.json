@@ -1,0 +1,17 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Consultas",
+        "version": "1.0.0",
+        "description": "A brand new API with no content.  Go nuts!"
+    },
+    "paths": {
+        "/v1/appointments": {
+            "summary": "Este recurso é a representação das consultas marcadas na clínica"
+        },
+        "/v1/appointments/{id}": {
+            "description": "Este recurso é a representação de cada consulta marcada a partir do controle de agendamento da clínica"
+        }
+    },
+    "components": {}
+}
