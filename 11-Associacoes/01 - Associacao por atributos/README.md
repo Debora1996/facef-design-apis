@@ -74,7 +74,7 @@ Na parte à esquerda da tela, na seção Data Types, clique no botão `+`
     },
     "doctor": {
         "id": "25",
-        "name": " ngelo Calafiori ",
+        "name": "Ângelo Calafiori",
         "phone_number": "91502-5501"
     }
 }

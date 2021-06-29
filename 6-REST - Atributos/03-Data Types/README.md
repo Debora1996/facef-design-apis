@@ -126,7 +126,7 @@ Na parte à esquerda da tela, na seção Data Types, clique com o botão direito
 Na parte à esquerda da tela, na seção Data Types, clique com o botão direito sobre `PatientsResponse` - em seguida, clique em `Clone`
 * No campo Name, preencha com: `PatientsRequest`
 * Clique sobre o Data Type recém criado (PatientsRequest)
-* Na parte direita da tela, na seção INFO, altere o campo Description para: `Representa um paciente da clínica - utilizado no request da consulta do objeto de instância`
+* Na parte direita da tela, na seção INFO, altere o campo Description para: `Representa um paciente da clínica - utilizado no request de criação do objeto de instância`
 * Na seção PROPERTIES, localize o campo id - clique nas reticências à direita - clique em `Delete`
 * Na seção EXAMPLE, localize o campo id e remova-o do JSON.
 
@@ -135,6 +135,6 @@ Na parte à esquerda da tela, na seção Data Types, clique com o botão direito
 Na parte à esquerda da tela, na seção Data Types, clique com o botão direito sobre `PatientsRequest` - em seguida, clique em `Clone`
 * No campo Name, preencha com: `PatientsRequestPatch`
 * Clique sobre o Data Type recém criado (PatientsRequest)
-* Na parte direita da tela, na seção INFO, altere o campo Description para: `Representa um paciente da clínica - utilizado no request da consulta do objeto de instância (específico para operação PATCH)`
+* Na parte direita da tela, na seção INFO, altere o campo Description para: `Representa um paciente da clínica - utilizado no request de criação do objeto de instância (específico para operação PATCH)`
 * Na seção PROPERTIES, remova a obrigatoriedade de todos os campos
 
