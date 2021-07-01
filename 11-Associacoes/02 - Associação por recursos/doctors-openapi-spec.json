@@ -20,8 +20,8 @@
                         "in": "query"
                     },
                     {
-                        "name": "cpf",
-                        "description": "Documento de identificação do médico - CPF",
+                        "name": "crm",
+                        "description": "Código de inscrição do médico no Conselhor Regional de Medicina (CRM)",
                         "schema": {
                             "type": "string"
                         },
@@ -69,11 +69,176 @@
                                 },
                                 "examples": {
                                     "DoctorResponseListExample": {
-                                        "value": {
-                                            "id": "25",
-                                            "name": "Peter Parker",
-                                            "cpf": "123.789.012-34"
-                                        }
+                                        "value": [
+                                            {
+                                                "id": "1",
+                                                "name": "Igor Pereira da Silva",
+                                                "crm": "3020156511.9776.97125",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "2",
+                                                "name": "Guilherme Paiva de Andrade",
+                                                "crm": "2227166511.8576.85126",
+                                                "phone_number": "1699301-9123"
+                                            },
+                                            {
+                                                "id": "3",
+                                                "name": "Rodrigo Martins Silva",
+                                                "crm": "352312706.8376.83127",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "4",
+                                                "name": "Juliana Araujo Carvalho",
+                                                "crm": "2725146610.7976.79128",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "5",
+                                                "name": "Luciano Dias da Silva",
+                                                "crm": "262417679.7576.75129",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "6",
+                                                "name": "Adriano de Souza Andrade",
+                                                "crm": "3412186412.7376.73130",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "7",
+                                                "name": "Joao Guilherme Santos",
+                                                "crm": "401414688.776.7131",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "8",
+                                                "name": "Juliana Mendes",
+                                                "crm": "331915679.6776.67132",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "9",
+                                                "name": "Francisco Meireles Junior",
+                                                "crm": "351616679.5576.55133",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "10",
+                                                "name": "Joao Victor Barbosa",
+                                                "crm": "282316679.4876.48134",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "11",
+                                                "name": "Gabriel Lacerda",
+                                                "crm": "331917697.3676.36135",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "12",
+                                                "name": "Amanda de Castro",
+                                                "crm": "332410679.3176.31136",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "13",
+                                                "name": "Hugo Luis Guimaraes",
+                                                "crm": "3116186511.2376.23137",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "14",
+                                                "name": "Maria Clara Ferraz",
+                                                "crm": "2723156511.2176.21138",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "15",
+                                                "name": "Henrique Castro Fernandes",
+                                                "crm": "322313688.1676.16139",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "16",
+                                                "name": "Thiago Bianchi Sousa",
+                                                "crm": "312017688.176.1140",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "17",
+                                                "name": "Alisson Melo da Cunha",
+                                                "crm": "3018166412.0776.07141",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "18",
+                                                "name": "Felipe Cesar Ramirez",
+                                                "crm": "352012679.0676.06142",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "19",
+                                                "name": "Marcelo Pereira da Silva",
+                                                "crm": "2821166511.0276.02143",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "20",
+                                                "name": "Augusto Cesar de Jesus",
+                                                "crm": "2920156411.9275.92144",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "21",
+                                                "name": "Felipe Oliveira Albuquerque",
+                                                "crm": "4112126510.975.9145",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "22",
+                                                "name": "Rafaela Diniz Barbosa",
+                                                "crm": "371713678.8975.89146",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "23",
+                                                "name": "Daniela Bianchi",
+                                                "crm": "2723146411.8475.84147",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "24",
+                                                "name": "Andressa Ribeiro",
+                                                "crm": "3716116411.7775.77148",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "25",
+                                                "name": "Andreia Guimaraes",
+                                                "crm": "272418696.7375.73149",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "26",
+                                                "name": "Thais Cristina Santos",
+                                                "crm": "3317146411.6375.63150",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "27",
+                                                "name": "Ana Lima Colombaroli",
+                                                "crm": "3317156510.6275.62151",
+                                                "phone_number": "1691234-5789"
+                                            },
+                                            {
+                                                "id": "28",
+                                                "name": "Regis Nascimento dos Santos",
+                                                "crm": "36161065125.2796.95121",
+                                                "phone_number": "1691234-5789"
+                                            }
+                                        ]
                                     }
                                 }
                             }
@@ -232,7 +397,7 @@
                                 "DoctorRequestExample": {
                                     "value": {
                                         "name": "Peter Parker",
-                                        "cpf": "123.789.012-34",
+                                        "crm": "123.789.012-34",
                                         "phone_number": "1691234-5789"
                                     }
                                 }
@@ -253,7 +418,7 @@
                                         "value": {
                                             "id": "25",
                                             "name": "Peter Parker",
-                                            "cpf": "123.789.012-34",
+                                            "crm": "123.789.012-34",
                                             "phone_number": "1691234-5789"
                                         }
                                     }
@@ -351,7 +516,7 @@
                                             "issue": "INVALID_PARAMETER_VALUE",
                                             "description": "Field value is invalid",
                                             "location": "body",
-                                            "field": "cpf",
+                                            "field": "crm",
                                             "value": "000.000.000-00"
                                         }
                                     }
@@ -516,12 +681,20 @@
                                     "$ref": "#/components/schemas/DoctorResponseDetail"
                                 },
                                 "examples": {
-                                    "DoctorResponseDetailExample": {
+                                    "DoctorResponseDetailExample1": {
                                         "value": {
-                                            "id": "25",
-                                            "name": "Peter Parker",
-                                            "cpf": "123.789.012-34",
+                                            "id": "1",
+                                            "name": "Igor Pereira da Silva",
+                                            "crm": "3020156511.9776.97125",
                                             "phone_number": "1691234-5789"
+                                        }
+                                    },
+                                    "DoctorResponseDetailExample2": {
+                                        "value": {
+                                            "id": "2",
+                                            "name": "Guilherme Paiva de Andrade",
+                                            "crm": "2227166511.8576.85126",
+                                            "phone_number": "1699301-9123"
                                         }
                                     }
                                 }
@@ -679,7 +852,7 @@
                                         "value": {
                                             "id": "25",
                                             "name": "Peter Parker",
-                                            "cpf": "123.789.012-34",
+                                            "crm": "123.789.012-34",
                                             "phone_number": "1691234-5789"
                                         }
                                     }
@@ -798,7 +971,7 @@
                                             "issue": "INVALID_PARAMETER_VALUE",
                                             "description": "Field value is invalid",
                                             "location": "body",
-                                            "field": "cpf",
+                                            "field": "crm",
                                             "value": "000.000.000-00"
                                         }
                                     }
@@ -1083,7 +1256,7 @@
                                 "DoctorRequestPatchExample": {
                                     "value": {
                                         "name": "Peter Parker",
-                                        "cpf": "123.789.012-34",
+                                        "crm": "123.789.012-34",
                                         "phone_number": "1691234-5789"
                                     }
                                 }
@@ -1104,7 +1277,7 @@
                                         "value": {
                                             "id": "25",
                                             "name": "Peter Parker",
-                                            "cpf": "123.789.012-34",
+                                            "crm": "123.789.012-34",
                                             "phone_number": "1691234-5789"
                                         }
                                     }
@@ -1223,7 +1396,7 @@
                                             "issue": "INVALID_PARAMETER_VALUE",
                                             "description": "Field value is invalid",
                                             "location": "body",
-                                            "field": "cpf",
+                                            "field": "crm",
                                             "value": "000.000.000-00"
                                         }
                                     }
@@ -1303,7 +1476,7 @@
                             }
                         },
                         "description": "Response para erro 504 - Gateway Timeout"
-                    }                    
+                    }
                 },
                 "summary": "Atualização de dados de um médico",
                 "description": "Operação utilizada para atualizar dados de médicos da clínica"
@@ -1327,7 +1500,7 @@
                 "title": "Root Type for DoctorResponseList",
                 "description": "Representa um médico da clínica - utilizado no request da consulta do objeto de coleção",
                 "required": [
-                    "cpf",
+                    "crm",
                     "id",
                     "name"
                 ],
@@ -1341,22 +1514,22 @@
                         "description": "Nome completo do médico",
                         "type": "string"
                     },
-                    "cpf": {
-                        "description": "Documento de identificação do médico - CPF",
+                    "crm": {
+                        "description": "Código de inscrição do médico no Conselhor Regional de Medicina (CRM)",
                         "type": "string"
                     }
                 },
                 "example": {
                     "id": "25",
                     "name": "Peter Parker",
-                    "cpf": "123.789.012-34"
+                    "crm": "123.789.012-34"
                 }
             },
             "DoctorRequest": {
                 "title": "Root Type for DoctorRequest",
                 "description": "Representa um médico da clínica - utilizado no request da criação do objeto de instância",
                 "required": [
-                    "cpf",
+                    "crm",
                     "name",
                     "phone_number"
                 ],
@@ -1366,8 +1539,8 @@
                         "description": "Nome completo do médico",
                         "type": "string"
                     },
-                    "cpf": {
-                        "description": "Documento de identificação do médico - CPF",
+                    "crm": {
+                        "description": "Código de inscrição do médico no Conselhor Regional de Medicina (CRM)",
                         "type": "string"
                     },
                     "phone_number": {
@@ -1377,7 +1550,7 @@
                 },
                 "example": {
                     "name": "Peter Parker",
-                    "cpf": "123.789.012-34",
+                    "crm": "123.789.012-34",
                     "phone_number": "1691234-5789"
                 }
             },
@@ -1385,7 +1558,7 @@
                 "title": "Root Type for DoctorResponse",
                 "description": "Representa um médico da clínica - utilizado no response da consulta do objeto de instância",
                 "required": [
-                    "cpf",
+                    "crm",
                     "id",
                     "name",
                     "phone_number"
@@ -1400,8 +1573,8 @@
                         "description": "Nome completo do médico",
                         "type": "string"
                     },
-                    "cpf": {
-                        "description": "Documento de identificação do médico - CPF",
+                    "crm": {
+                        "description": "Código de inscrição do médico no Conselhor Regional de Medicina (CRM)",
                         "type": "string"
                     },
                     "phone_number": {
@@ -1412,7 +1585,7 @@
                 "example": {
                     "id": "25",
                     "name": "Peter Parker",
-                    "cpf": "123.789.012-34",
+                    "crm": "123.789.012-34",
                     "phone_number": "1691234-5789"
                 }
             },
@@ -1450,7 +1623,7 @@
                     "issue": "INVALID_PARAMETER_VALUE",
                     "description": "Field value is invalid",
                     "location": "body",
-                    "field": "cpf",
+                    "field": "crm",
                     "value": "000.000.000-00"
                 }
             },
@@ -1463,8 +1636,8 @@
                         "description": "Nome completo do médico",
                         "type": "string"
                     },
-                    "cpf": {
-                        "description": "Documento de identificação do médico - CPF",
+                    "crm": {
+                        "description": "Código de inscrição do médico no Conselhor Regional de Medicina (CRM)",
                         "type": "string"
                     },
                     "phone_number": {
@@ -1474,7 +1647,7 @@
                 },
                 "example": {
                     "name": "Peter Parker",
-                    "cpf": "123.789.012-34",
+                    "crm": "123.789.012-34",
                     "phone_number": "1691234-5789"
                 }
             }
@@ -1487,12 +1660,20 @@
                             "$ref": "#/components/schemas/DoctorResponseDetail"
                         },
                         "examples": {
-                            "DoctorResponseDetailExample": {
+                            "DoctorResponseDetailExample1": {
                                 "value": {
-                                    "id": "25",
-                                    "name": "Peter Parker",
-                                    "cpf": "123.789.012-34",
+                                    "id": "1",
+                                    "name": "Igor Pereira da Silva",
+                                    "crm": "3020156511.9776.97125",
                                     "phone_number": "1691234-5789"
+                                }
+                            },
+                            "DoctorResponseDetailExample2": {
+                                "value": {
+                                    "id": "2",
+                                    "name": "Guilherme Paiva de Andrade",
+                                    "crm": "2227166511.8576.85126",
+                                    "phone_number": "1699301-9123"
                                 }
                             }
                         }
@@ -1504,15 +1685,155 @@
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "#/components/schemas/DoctorResponseList"
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/DoctorResponseList"
+                            }
                         },
                         "examples": {
                             "DoctorResponseListExample": {
-                                "value": {
-                                    "id": "25",
-                                    "name": "Peter Parker",
-                                    "cpf": "123.789.012-34"
-                                }
+                                "value": [
+                                    {
+                                        "id": "1",
+                                        "name": "Igor Pereira da Silva",
+                                        "crm": "3020156511.9776.97125"
+                                    },
+                                    {
+                                        "id": "2",
+                                        "name": "Guilherme Paiva de Andrade",
+                                        "crm": "2227166511.8576.85126"
+                                    },
+                                    {
+                                        "id": "3",
+                                        "name": "Rodrigo Martins Silva",
+                                        "crm": "352312706.8376.83127"
+                                    },
+                                    {
+                                        "id": "4",
+                                        "name": "Juliana Araujo Carvalho",
+                                        "crm": "2725146610.7976.79128"
+                                    },
+                                    {
+                                        "id": "5",
+                                        "name": "Luciano Dias da Silva",
+                                        "crm": "262417679.7576.75129"
+                                    },
+                                    {
+                                        "id": "6",
+                                        "name": "Adriano de Souza Andrade",
+                                        "crm": "3412186412.7376.73130"
+                                    },
+                                    {
+                                        "id": "7",
+                                        "name": "Joao Guilherme Santos",
+                                        "crm": "401414688.776.7131"
+                                    },
+                                    {
+                                        "id": "8",
+                                        "name": "Juliana Mendes",
+                                        "crm": "331915679.6776.67132"
+                                    },
+                                    {
+                                        "id": "9",
+                                        "name": "Francisco Meireles Junior",
+                                        "crm": "351616679.5576.55133"
+                                    },
+                                    {
+                                        "id": "10",
+                                        "name": "Joao Victor Barbosa",
+                                        "crm": "282316679.4876.48134"
+                                    },
+                                    {
+                                        "id": "11",
+                                        "name": "Gabriel Lacerda",
+                                        "crm": "331917697.3676.36135"
+                                    },
+                                    {
+                                        "id": "12",
+                                        "name": "Amanda de Castro",
+                                        "crm": "332410679.3176.31136"
+                                    },
+                                    {
+                                        "id": "13",
+                                        "name": "Hugo Luis Guimaraes",
+                                        "crm": "3116186511.2376.23137"
+                                    },
+                                    {
+                                        "id": "14",
+                                        "name": "Maria Clara Ferraz",
+                                        "crm": "2723156511.2176.21138"
+                                    },
+                                    {
+                                        "id": "15",
+                                        "name": "Henrique Castro Fernandes",
+                                        "crm": "322313688.1676.16139"
+                                    },
+                                    {
+                                        "id": "16",
+                                        "name": "Thiago Bianchi Sousa",
+                                        "crm": "312017688.176.1140"
+                                    },
+                                    {
+                                        "id": "17",
+                                        "name": "Alisson Melo da Cunha",
+                                        "crm": "3018166412.0776.07141"
+                                    },
+                                    {
+                                        "id": "18",
+                                        "name": "Felipe Cesar Ramirez",
+                                        "crm": "352012679.0676.06142"
+                                    },
+                                    {
+                                        "id": "19",
+                                        "name": "Marcelo Pereira da Silva",
+                                        "crm": "2821166511.0276.02143"
+                                    },
+                                    {
+                                        "id": "20",
+                                        "name": "Augusto Cesar de Jesus",
+                                        "crm": "2920156411.9275.92144"
+                                    },
+                                    {
+                                        "id": "21",
+                                        "name": "Felipe Oliveira Albuquerque",
+                                        "crm": "4112126510.975.9145"
+                                    },
+                                    {
+                                        "id": "22",
+                                        "name": "Rafaela Diniz Barbosa",
+                                        "crm": "371713678.8975.89146"
+                                    },
+                                    {
+                                        "id": "23",
+                                        "name": "Daniela Bianchi",
+                                        "crm": "2723146411.8475.84147"
+                                    },
+                                    {
+                                        "id": "24",
+                                        "name": "Andressa Ribeiro",
+                                        "crm": "3716116411.7775.77148"
+                                    },
+                                    {
+                                        "id": "25",
+                                        "name": "Andreia Guimaraes",
+                                        "crm": "272418696.7375.73149"
+                                    },
+                                    {
+                                        "id": "26",
+                                        "name": "Thais Cristina Santos",
+                                        "crm": "3317146411.6375.63150"
+                                    },
+                                    {
+                                        "id": "27",
+                                        "name": "Ana Lima Colombaroli",
+                                        "crm": "3317156510.6275.62151"
+                                    },
+                                    {
+                                        "id": "28",
+                                        "name": "Regis Nascimento dos Santos",
+                                        "crm": "36161065125.2796.95121"
+                                    }
+                                ]
                             }
                         }
                     }
