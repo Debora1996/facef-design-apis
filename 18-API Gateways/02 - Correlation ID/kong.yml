@@ -1,0 +1,18 @@
+_format_version: "2.1"
+_transform: true
+
+services:
+- name: doctors-service
+  url: http://facef-design-apis-doctors:8080
+  routes:
+  - name: get-doctors
+    paths:
+    - /
+
+plugins:
+- name: correlation-id
+  service: doctors-service
+  config: 
+    header_name: Kong-Request-ID
+    generator: uuid#counter
+    echo_downstream: true

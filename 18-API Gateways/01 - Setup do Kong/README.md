@@ -15,15 +15,9 @@ curl http://localhost:8080/v1/doctors/1
 
 ## Atividade 2 - Setup do kong Gateway
 
-Executar os comandos no terminal:
-```
-docker volume create kong-vol
-docker volume inspect kong-vol
-```
-
 Fazer o download do arquivo kong.yml para uma pasta na sua máquina
 
-Executar os comandos no terminal:
+Executar os comandos no terminal, substituindo PASTA_KONG_YML pelo endereço pasta onde você baixou o kong.yml:
 ```
 docker run -d --name kong \
      --network=kong-net \
@@ -41,9 +35,8 @@ docker run -d --name kong \
      -p 127.0.0.1:8444:8444 \
      kong:latest
 ```
-Obs: substituir PASTA_KONG_YML pelo endereço pasta onde você baixou o kong.yml
 
 Testar o funcionamento do backend:
 ```
-curl http://localhost:8000/v1/doctors/1
+curl -v http://localhost:8000/v1/doctors/1
 ```
