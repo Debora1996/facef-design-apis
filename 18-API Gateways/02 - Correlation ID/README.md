@@ -9,7 +9,7 @@ Executar no terminal:
 docker container restart kong
 ```
 
-Testar o funcionamento do backend:
+Invocar a API de consulta de médico:
 ```
 curl -v http://localhost:8000/v1/doctors/1
 ```

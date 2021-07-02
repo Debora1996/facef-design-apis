@@ -1,0 +1,25 @@
+_format_version: "2.1"
+_transform: true
+
+services:
+- name: doctors-service
+  url: http://facef-design-apis-doctors:8080
+  routes:
+  - name: get-doctors
+    paths:
+    - /
+
+plugins:
+- name: proxy-cache
+  service: doctors-service
+  config: 
+    response_code:
+    - 200
+    request_method:
+    - GET
+    - HEAD
+    content_type:
+    - text/plain
+    - application/json
+    cache_ttl: 300
+    strategy: memory
