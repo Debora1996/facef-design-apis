@@ -8,3 +8,11 @@ services:
   - name: get-doctors
     paths:
     - /
+
+plugins:
+- name: rate-limiting
+  service: doctors-service
+  config: 
+    minute: 3
+    hour: 10000
+    policy: local

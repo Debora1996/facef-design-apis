@@ -8,3 +8,16 @@ services:
   - name: get-doctors
     paths:
     - /
+
+plugins:
+- name: key-auth
+  service: doctors-service
+  config: 
+    key_names:
+    - apikey
+
+keyauth_credentials:
+- consumer: user123
+
+consumers:
+- username: user123

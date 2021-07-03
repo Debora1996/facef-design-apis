@@ -1,4 +1,4 @@
-# Exercício 02 - Correlation ID
+# Exercício 03 - Correlation ID
 
 ## Atividade 1 - Setup do plugin de Correlation ID
 
