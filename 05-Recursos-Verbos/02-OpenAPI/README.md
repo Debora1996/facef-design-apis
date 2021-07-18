@@ -1,6 +1,6 @@
 # Exercício - OpenAPI
 
-## Atividade 1 - Criação do OpenAPI
+## Atividade - Criação do OpenAPI
 
 Seguindo o modelo de microserviços, vamos criar um arquivo OpenAPI para o recurso de Pacientes (definido na atividade anterior).
 
