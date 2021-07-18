@@ -1,8 +1,8 @@
-# OpenAPI
-
-## Atividade 1 - Criação do path para o recurso de coleção da entidade Pacientes
+# Exercício - Paths
 
 A partir do OpenAPI gerado na atividade anterior:
+
+## Atividade 1 - Criação do path para o recurso de coleção da entidade Pacientes
 
 * No lado esquerdo da tela, a partir da seção Paths, clique no botão "+" - no campo que se abre, digite o nome do recurso de coleção: `/patients` - clique no botão Add
 * No lado direito da tela, a partir da seção INFO -> Summary, clique no lápis e digite um título para o recurso de coleção. Ex: `Conjunto de pacientes atendidos pela clinica`
