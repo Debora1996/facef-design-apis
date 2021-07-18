@@ -10,7 +10,18 @@
             "description": "Este recurso é a representação dos pacientes que precisam de atendimento médico e, para isso, solicitam marcação de consultas a partir do controle de agendamento da clínica"
         },
         "/patients/{id}": {
-            "description": "Este recurso é a representação de cada paciente que precisa de atendimento médico e, para isso, solicita marcação de consultas a partir do controle de agendamento da clínica"
+            "description": "Este recurso é a representação de cada paciente que precisa de atendimento médico e, para isso, solicita marcação de consultas a partir do controle de agendamento da clínica",
+            "parameters": [
+                {
+                    "name": "id",
+                    "description": "Campo identificador da entidade Pacientes",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "in": "path",
+                    "required": true
+                }
+            ]
         }
     }
 }
