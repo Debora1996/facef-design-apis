@@ -1,0 +1,35 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Pacientes",
+        "version": "1.0.0",
+        "description": "ProHealth - Contrato da API de Pacientes"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080",
+            "description": ""
+        }
+    ],
+    "paths": {
+        "/patients": {
+            "summary": "Conjunto de pacientes atendidos pela clinica",
+            "description": "Este recurso é a representação dos pacientes que precisam de atendimento médico e, para isso, solicitam marcação de consultas a partir do controle de agendamento da clínica"
+        },
+        "/patients/{id}": {
+            "summary": "Informações sobre o paciente atendido pela clinica",
+            "description": "Este recurso é a representação de cada paciente que precisa de atendimento médico e, para isso, solicita marcação de consultas a partir do controle de agendamento da clínica",
+            "parameters": [
+                {
+                    "name": "id",
+                    "description": "Campo identificador da entidade Pacientes",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "in": "path",
+                    "required": true
+                }
+            ]
+        }
+    }
+}
