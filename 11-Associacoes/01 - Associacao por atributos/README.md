@@ -40,6 +40,7 @@ Na parte à esquerda da tela, na seção Data Types, clique no botão `+`
 {
     "id": "25",
     "name": " ngelo Calafiori ",
+    "crm": "123456-SP",
     "phone_number": "91502-5501"
 }
 ```
@@ -53,6 +54,7 @@ Nome | Descrição | Obrigatoriedade | Tipo
 ------|--------|--------|--------
 id | Código identificador do médico | Required | String as String
 name | Nome completo do médico | Required | String as String
+crm | Registro no Conselho Regional de Medicina | Required | String as String
 phone_number | Número de telefone do médico | Required | String as String
 
 * Clique no botão `Save`
