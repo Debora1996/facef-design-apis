@@ -2,9 +2,22 @@
 
 ## Atividade - Criação do OpenAPI
 
-Seguindo o modelo de microserviços, vamos criar um arquivo OpenAPI para o recurso de Pacientes (definido na atividade anterior).
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
 
-Para isso, siga o passo-a-passo:
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "Open API"
+ 
+4 - Abra o conteúdo do arquivo [pacientes-openapi-spec.json](pacientes-openapi-spec.json)
+
+5 - A tela apresentada deve corresponder a essa:
+
+![print01.png](print01.png)
+
+## Passo a Passo:
+
+Seguindo o modelo de microserviços, vamos criar um arquivo OpenAPI para o recurso de Pacientes (definido na atividade anterior):
 
 1 - Abra a ferramenta:
 https://www.apicur.io/apicurito/
@@ -23,3 +36,6 @@ Pacientes
 ````
 ProHealth - Contrato da API de Pacientes
 ````
+
+* Na seção SERVERS, clique em Add a server
+    * No campo Server URL, preencha com: http://localhost:8080 - clique em Apply - clique em Save
