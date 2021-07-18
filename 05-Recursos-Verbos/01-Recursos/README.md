@@ -1,5 +1,5 @@
-# Recursos
+# Exercício - Recursos
 
-## Atividade 1 - Identificação dos recursos
+## Atividade - Identificação dos recursos
 
-A partir das entidades de negócio mapeadas na atividade anterior, liste os recursos de coleção.
+A partir das entidades de negócio mapeadas na atividade anterior, escreva os nomes dos recursos de coleção dessas entidades (em inglês).
