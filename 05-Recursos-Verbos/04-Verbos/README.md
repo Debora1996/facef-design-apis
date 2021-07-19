@@ -1,4 +1,21 @@
-# Verbos HTTP
+# Exercício - Verbos HTTP
+
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
+
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "Open API"
+ 
+4 - Abra o conteúdo do arquivo [pacientes-openapi-spec.json](pacientes-openapi-spec.json)
+
+5 - As telas apresentadas devem corresponder a essas:
+
+![print01.png](print01.png)
+
+![print02.png](print02.png)
+
+## Passo a Passo:
 
 A partir dos recursos gerados na atividade anterior, utilize os verbos HTTP seguindo o formato CRUD:
 * C - Create - POST
@@ -7,9 +24,9 @@ A partir dos recursos gerados na atividade anterior, utilize os verbos HTTP segu
 * D - Delete - DELETE
 
 
-## Atividade 1 - Definição de verbos para o recurso de coleção
+### Etapa 1 - Definição de verbos para o recurso de coleção
 
-1.1 - Na parte esquerda da tela, clique no path `/pacientes`
+1.1 - Na parte esquerda da tela, clique no path `/patients`
 
 1.2 -Na parte inferior à direita, clique nos botões:
 
@@ -54,9 +71,9 @@ A partir dos recursos gerados na atividade anterior, utilize os verbos HTTP segu
     Description: ```Operação utilizada para atualizar dados de pacientes da clínica```
 
 
-## Atividade 2 - Definição de verbos para o recurso de instância
+### Etapa 2 - Definição de verbos para o recurso de instância
 
-2.1 - Na parte esquerda da tela, clique no path `/pacientes/{id}`
+2.1 - Na parte esquerda da tela, clique no path `/patients/{id}`
 
 2.2 - Na parte inferior à direita, clique nos botões:
 

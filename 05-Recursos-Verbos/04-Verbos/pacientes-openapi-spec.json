@@ -1,0 +1,75 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Pacientes",
+        "version": "1.0.0",
+        "description": "ProHealth - Contrato da API de Pacientes"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080",
+            "description": ""
+        }
+    ],
+    "paths": {
+        "/patients": {
+            "summary": "Conjunto de pacientes atendidos pela clinica",
+            "description": "Este recurso é a representação dos pacientes que precisam de atendimento médico e, para isso, solicitam marcação de consultas a partir do controle de agendamento da clínica",
+            "get": {
+                "summary": "Consulta de pacientes",
+                "description": "Operação utilizada para consultar todos os pacientes da clínica"
+            },
+            "put": {
+                "summary": "Atualização de pacientes",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            },
+            "post": {
+                "summary": "Criação de pacientes",
+                "description": "Operação utilizada para cadastrar novos pacientes da clínica"
+            },
+            "delete": {
+                "summary": "Remoção de pacientes",
+                "description": "Operação utilizada para apagar pacientes do cadastro da clínica"
+            },
+            "patch": {
+                "summary": "Atualização de pacientes",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            }            
+        },
+        "/patients/{id}": {
+            "summary": "Informações sobre o paciente atendido pela clinica",
+            "description": "Este recurso é a representação de cada paciente que precisa de atendimento médico e, para isso, solicita marcação de consultas a partir do controle de agendamento da clínica",
+            "parameters": [
+                {
+                    "name": "id",
+                    "description": "Campo identificador da entidade Pacientes",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "in": "path",
+                    "required": true
+                }
+            ],
+            "get": {
+                "summary": "Consulta de dados de um paciente",
+                "description": "Operação utilizada para consultar dados de pacientes da clínica"
+            },
+            "put": {
+                "summary": "Atualização de dados de um paciente",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            },
+            "post": {
+                "summary": "Criação de pacientes",
+                "description": "Operação utilizada para cadastrar novos pacientes da clínica"
+            },
+            "delete": {
+                "summary": "Remoção de pacientes",
+                "description": "Operação utilizada para apagar um paciente do cadastro da clínica"
+            },
+            "patch": {
+                "summary": "Atualização de dados de um paciente",
+                "description": "Operação utilizada para atualizar dados de pacientes da clínica"
+            }            
+        }
+    }
+}
