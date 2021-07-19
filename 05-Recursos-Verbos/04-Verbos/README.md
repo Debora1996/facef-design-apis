@@ -117,5 +117,6 @@ A partir dos recursos gerados na atividade anterior, utilize os verbos HTTP segu
 
     Description: ```Operação utilizada para atualizar dados de pacientes da clínica```
 
+<hr>
 
-Obs 1: Perceba que todas as operações criadas ficaram marcadas com um sinal de exclamação. Isso se deve porque elas ainda estão incompletas pela falta dos campos que irão compor o bodies de request e response - nós vamos fazer isso na próxima atividade.
+*Obs 1: Perceba que todas as operações criadas ficaram marcadas com um sinal de exclamação. Isso se deve porque elas ainda estão incompletas pela falta dos campos que irão compor o bodies de request e response - nós vamos fazer isso na próxima atividade.*
