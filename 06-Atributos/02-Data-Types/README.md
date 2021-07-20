@@ -1,8 +1,23 @@
-# Data Types no OpenAPI
+# Exercício - Data Types
 
-A partir do Apicurito:
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
 
-## Atividade 1 - Criação do Data Type MedicalInsurance
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "Open API"
+ 
+4 - Abra o conteúdo do arquivo [pacientes-openapi-spec.json](pacientes-openapi-spec.json)
+
+5 - As telas apresentadas devem corresponder a essas:
+
+![print01.png](print01.png)
+
+## Passo a Passo:
+
+A partir do OpenAPI gerado no exercício anterior:
+
+### Etapa 1 - Criação do Data Type MedicalInsurance
 
 Na parte à esquerda da tela, na seção Data Types, clique em `Add a data type`
 * Em 1. Enter Basic Information, preencha no campo Name: `MedicalInsurance`
@@ -28,7 +43,7 @@ operator_code | Código da operadora de plano de saúde na qual o paciente está
 
 * Clique no botão `Save`
 
-## Atividade 2 - Criação do Data Type Address
+### Etapa 2 - Criação do Data Type Address
 
 Na parte à esquerda da tela, na seção Data Types, clique em `Add a data type`
 * Em 1. Enter Basic Information, preencha no campo Name: `Address`
@@ -61,7 +76,7 @@ zipcode | Código postal - CEP | Required | String as String
 
 * Clique no botão `Save`
 
-## Atividade 3 - Criação do Data Type PatientsResponse
+### Etapa 3 - Criação do Data Type PatientsResponse
 
 Na parte à esquerda da tela, na seção Data Types, clique em `Add a data type`
 * Em 1. Enter Basic Information, preencha no campo Name: `Patient`
@@ -112,7 +127,7 @@ phone_number | Número de telefone do paciente para contato | Required | String 
 smoker | Indica se o paciente é fumante (true-Sim, false-Não) | Not Required | Boolean
 weight | Peso do paciente | Required | Integer as 32-Bit Integer
 
-## Atividade 4 - Criação do Data Type PatientsResponseList
+### Etapa 4 - Criação do Data Type PatientsResponseList
 
 Na parte à esquerda da tela, na seção Data Types, clique com o botão direito sobre `PatientsResponse` - em seguida, clique em `Clone`
 * No campo Name, preencha com: `PatientsResponseList`
@@ -121,7 +136,7 @@ Na parte à esquerda da tela, na seção Data Types, clique com o botão direito
 * Na seção PROPERTIES, remova todos os campos, exceto os campos cpf, id e name
 * Na seção EXAMPLE, remova todos os campos, exceto os campos cpf, id e name
 
-## Atividade 5 - Criação do Data Type PatientsRequest
+### Etapa 5 - Criação do Data Type PatientsRequest
 
 Na parte à esquerda da tela, na seção Data Types, clique com o botão direito sobre `PatientsResponse` - em seguida, clique em `Clone`
 * No campo Name, preencha com: `PatientsRequest`
@@ -130,7 +145,7 @@ Na parte à esquerda da tela, na seção Data Types, clique com o botão direito
 * Na seção PROPERTIES, localize o campo id - clique nas reticências à direita - clique em `Delete`
 * Na seção EXAMPLE, localize o campo id e remova-o do JSON.
 
-## Atividade 6 - Criação do Data Type PatientsRequestPatch
+### Etapa 6 - Criação do Data Type PatientsRequestPatch
 
 Na parte à esquerda da tela, na seção Data Types, clique com o botão direito sobre `PatientsRequest` - em seguida, clique em `Clone`
 * No campo Name, preencha com: `PatientsRequestPatch`
