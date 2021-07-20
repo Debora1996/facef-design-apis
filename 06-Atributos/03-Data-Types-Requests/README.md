@@ -1,8 +1,25 @@
 # Configurando Data Types em requests no OpenAPI
 
-A partir do Apicurito:
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
 
-## Atividade 1 - Configuração do corpo do request para POST /patients
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "Open API"
+ 
+4 - Abra o conteúdo do arquivo [pacientes-openapi-spec.json](pacientes-openapi-spec.json)
+
+5 - As telas apresentadas devem corresponder a essas:
+
+![print01.png](print01.png)
+
+![print02.png](print02.png)
+
+## Passo a Passo:
+
+A partir do OpenAPI gerado no exercício anterior:
+
+### Etapa 1 - Configuração do corpo do request para POST /patients
 
 * Na parte esquerda da tela, na seção PATHS, clique no path /patients
 * Na parte direita da tela, certifique-se que a operação POST esteja selecionada
@@ -39,7 +56,7 @@ A partir do Apicurito:
 }
 ```
 
-## Atividade 2 - Configuração do corpo do request para PUT /patients/{id}
+### Etapa 2 - Configuração do corpo do request para PUT /patients/{id}
 
 * Na parte esquerda da tela, na seção PATHS, clique no path /patients/{id}
 * Na parte direita da tela, certifique-se que a operação PUT esteja selecionada
@@ -76,7 +93,7 @@ A partir do Apicurito:
 }
 ```
 
-## Atividade 3 - Configuração do corpo do request para PATCH /patients/{id}
+### Etapa 3 - Configuração do corpo do request para PATCH /patients/{id}
 
 * Na parte esquerda da tela, na seção PATHS, clique no path /patients/{id}
 * Na parte direita da tela, certifique-se que a operação PATCH esteja selecionada
