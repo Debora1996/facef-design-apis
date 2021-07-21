@@ -1,4 +1,4 @@
-# Exercício - Mensagem de Erro
+# Exercício - DataType de Erro
 
 1 - Abra a ferramenta:
 https://www.apicur.io/apicurito/
