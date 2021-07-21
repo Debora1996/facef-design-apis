@@ -1,8 +1,23 @@
-# Configurando mensagem de erro para body dos responses no OpenAPI
+# Exercício - Mensagem de Erro
 
-A partir do Apicurito:
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
 
-## Atividade 1 - Criação de Data Type para mensagens de erro
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "Open API"
+ 
+4 - Abra o conteúdo do arquivo [pacientes-openapi-spec.json](pacientes-openapi-spec.json)
+
+5 - As telas apresentadas devem corresponder a essas:
+
+![print01.png](print01.png)
+
+## Passo a Passo:
+
+A partir do OpenAPI gerado no exercício anterior:
+
+### Etapa 1 - Criação de Data Type para mensagens de erro
 
 Na parte à esquerda da tela, na seção Data Types, clique em `Add a data type`
 * Em 1. Enter Basic Information, preencha no campo Name: `ErrorMessage`
