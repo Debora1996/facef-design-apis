@@ -9,7 +9,7 @@ https://www.apicur.io/apicurito/
  
 4 - Abra o conteúdo do arquivo [pacientes-openapi-spec.json](pacientes-openapi-spec.json)
 
-5 - As telas apresentadas devem corresponder a essas:
+5 - A tela apresentada deve corresponder a essa:
 
 ![print01.png](print01.png)
 

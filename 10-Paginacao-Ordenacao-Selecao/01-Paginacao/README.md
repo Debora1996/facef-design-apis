@@ -1,8 +1,23 @@
-# Exercício 01 - Parâmetros de paginação
+# Exercício - Paginação
 
-A partir do Apicurito:
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
 
-## Atividade 1 - Configuração de parâmetros de paginação para coleção de pacientes
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "Open API"
+ 
+4 - Abra o conteúdo do arquivo [pacientes-openapi-spec.json](pacientes-openapi-spec.json)
+
+5 - A tela apresentada deve corresponder a essa:
+
+![print01.png](print01.png)
+
+## Passo a Passo:
+
+A partir do OpenAPI gerado no exercício anterior:
+
+### Etapa 1 - Configuração de parâmetros de paginação para coleção de pacientes
 
 * Na parte esquerda da tela, na seção Paths, clique em `/patients`
 * Na parte direita da tela, confirme a seleção do verbo Get
@@ -12,4 +27,4 @@ A partir do Apicurito:
 Name | Description | Type Information
 -----|-------------|-----------------
 _limit | Número de elementos retornado por página (default 50) | Not Required | Integer as Integer
-_offset | Posição do elemento inicial (default 1) | Not Required | Integer as Integer
+_offset | Posição do elemento inicial (default 0) | Not Required | Integer as Integer
