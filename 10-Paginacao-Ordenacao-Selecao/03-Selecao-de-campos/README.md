@@ -1,8 +1,23 @@
-# Exercício 03 - Seleção de campos
+# Exercício - Seleção de campos
 
-A partir do Apicurito:
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
 
-## Atividade 1 - Configuração de parâmetro de seleção de campos a consulta de um paciente
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "Open API"
+ 
+4 - Abra o conteúdo do arquivo [pacientes-openapi-spec.json](pacientes-openapi-spec.json)
+
+5 - A tela apresentada deve corresponder a essa:
+
+![print01.png](print01.png)
+
+## Passo a Passo:
+
+A partir do OpenAPI gerado no exercício anterior:
+
+### Etapa 1 - Configuração de parâmetro de seleção de campos a consulta de um paciente
 
 * Na parte esquerda da tela, na seção Paths, clique em `/patients/{id}`
 * Na parte direita da tela, confirme a seleção do verbo Get
