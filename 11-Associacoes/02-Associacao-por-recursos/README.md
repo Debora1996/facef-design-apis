@@ -1,9 +1,21 @@
-# Exercício 02 - Associação por recursos
+# Exercício - Associação por recursos
 
-A partir do Apicurito:
-* Abrir o arquivo ...
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
 
-## Atividade 1 - Criação do Data Type Specialities - Request
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "Open API"
+ 
+4 - Abra o conteúdo do arquivo [doctors-openapi-spec.json](doctors-openapi-spec.json)
+
+5 - A tela apresentada deve corresponder a essa:
+
+![print01.png](print01.png)
+
+## Passo a Passo:
+
+### Etapa 1 - Criação do Data Type Specialities - Request
 
 Na parte à esquerda da tela, na seção Data Types, clique no botão `+`
 * Em 1. Enter Basic Information, preencha no campo Name: `SpecialitiesRequest`
@@ -24,7 +36,7 @@ Nome | Descrição | Obrigatoriedade | Tipo
 ------|--------|--------|--------
 id | Código da especialidade médica | Required | String as String
 
-## Atividade 2 - Criação do Data Type Specialities - Response
+### Etapa 2 - Criação do Data Type Specialities - Response
 
 Na parte à esquerda da tela, na seção Data Types, clique no botão `+`
 * Em 1. Enter Basic Information, preencha no campo Name: `SpecialitiesResponse`
@@ -50,7 +62,7 @@ description | Descrição da especialidade médica | Required | String as String
 id | Código da especialidade médica | Required | String as String
 name | Nome da especialidade médica | Required | String as String
 
-## Atividade 3 - Criação do Response
+### Etapa 3 - Criação do Response
 
 Na parte à esquerda da tela, na seção Responses, clique no botão `+`
 * Em 1. Enter Basic Information, preencha no campo Name: `SpecialitiesResponse`
@@ -69,7 +81,7 @@ Na parte à esquerda da tela, na seção Responses, clique no botão `+`
 }
 ```
 
-## Atividade 4 - Criação da rota de consulta de especialidades
+### Etapa 4 - Criação da rota de consulta de especialidades
 
 Na parte à esquerda da tela, na seção Paths, clique no botão `+`
 * No campo Path, preencha: `/v1/doctors/{id}/specialities` - clique no botão `Add`
@@ -79,7 +91,7 @@ Na parte à esquerda da tela, na seção Paths, clique no botão `+`
 * Clique em `No description`: `Campo identificador do Médico`
 * Clique em `No Type` - `Type`: `String`
 
-## Atividade 5 - Definição de verbos para a consulta de especialidades
+### Etapa 5 - Definição de verbos para a consulta de especialidades
 
 A partir da rota `/v1/doctors/{id}/specialities`:
 

@@ -5,6 +5,12 @@
         "version": "1.0.0",
         "description": "ProHealth - Contrato da API de Médicos"
     },
+    "servers": [
+        {
+            "url": "http://localhost:8080",
+            "description": ""
+        }
+    ],
     "paths": {
         "/v1/doctors": {
             "summary": "Rota para manutenção da lista de médicos",
@@ -69,176 +75,11 @@
                                 },
                                 "examples": {
                                     "DoctorResponseListExample": {
-                                        "value": [
-                                            {
-                                                "id": "1",
-                                                "name": "Igor Pereira da Silva",
-                                                "crm": "3020156511.9776.97125",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "2",
-                                                "name": "Guilherme Paiva de Andrade",
-                                                "crm": "2227166511.8576.85126",
-                                                "phone_number": "1699301-9123"
-                                            },
-                                            {
-                                                "id": "3",
-                                                "name": "Rodrigo Martins Silva",
-                                                "crm": "352312706.8376.83127",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "4",
-                                                "name": "Juliana Araujo Carvalho",
-                                                "crm": "2725146610.7976.79128",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "5",
-                                                "name": "Luciano Dias da Silva",
-                                                "crm": "262417679.7576.75129",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "6",
-                                                "name": "Adriano de Souza Andrade",
-                                                "crm": "3412186412.7376.73130",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "7",
-                                                "name": "Joao Guilherme Santos",
-                                                "crm": "401414688.776.7131",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "8",
-                                                "name": "Juliana Mendes",
-                                                "crm": "331915679.6776.67132",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "9",
-                                                "name": "Francisco Meireles Junior",
-                                                "crm": "351616679.5576.55133",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "10",
-                                                "name": "Joao Victor Barbosa",
-                                                "crm": "282316679.4876.48134",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "11",
-                                                "name": "Gabriel Lacerda",
-                                                "crm": "331917697.3676.36135",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "12",
-                                                "name": "Amanda de Castro",
-                                                "crm": "332410679.3176.31136",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "13",
-                                                "name": "Hugo Luis Guimaraes",
-                                                "crm": "3116186511.2376.23137",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "14",
-                                                "name": "Maria Clara Ferraz",
-                                                "crm": "2723156511.2176.21138",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "15",
-                                                "name": "Henrique Castro Fernandes",
-                                                "crm": "322313688.1676.16139",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "16",
-                                                "name": "Thiago Bianchi Sousa",
-                                                "crm": "312017688.176.1140",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "17",
-                                                "name": "Alisson Melo da Cunha",
-                                                "crm": "3018166412.0776.07141",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "18",
-                                                "name": "Felipe Cesar Ramirez",
-                                                "crm": "352012679.0676.06142",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "19",
-                                                "name": "Marcelo Pereira da Silva",
-                                                "crm": "2821166511.0276.02143",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "20",
-                                                "name": "Augusto Cesar de Jesus",
-                                                "crm": "2920156411.9275.92144",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "21",
-                                                "name": "Felipe Oliveira Albuquerque",
-                                                "crm": "4112126510.975.9145",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "22",
-                                                "name": "Rafaela Diniz Barbosa",
-                                                "crm": "371713678.8975.89146",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "23",
-                                                "name": "Daniela Bianchi",
-                                                "crm": "2723146411.8475.84147",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "24",
-                                                "name": "Andressa Ribeiro",
-                                                "crm": "3716116411.7775.77148",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "25",
-                                                "name": "Andreia Guimaraes",
-                                                "crm": "272418696.7375.73149",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "26",
-                                                "name": "Thais Cristina Santos",
-                                                "crm": "3317146411.6375.63150",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "27",
-                                                "name": "Ana Lima Colombaroli",
-                                                "crm": "3317156510.6275.62151",
-                                                "phone_number": "1691234-5789"
-                                            },
-                                            {
-                                                "id": "28",
-                                                "name": "Regis Nascimento dos Santos",
-                                                "crm": "36161065125.2796.95121",
-                                                "phone_number": "1691234-5789"
-                                            }
-                                        ]
+                                        "value": {
+                                            "id": "25",
+                                            "name": "Peter Parker",
+                                            "crm": "123.789.012-34"
+                                        }
                                     }
                                 }
                             }
@@ -681,20 +522,12 @@
                                     "$ref": "#/components/schemas/DoctorResponseDetail"
                                 },
                                 "examples": {
-                                    "DoctorResponseDetailExample1": {
+                                    "DoctorResponseDetailExample": {
                                         "value": {
-                                            "id": "1",
-                                            "name": "Igor Pereira da Silva",
-                                            "crm": "3020156511.9776.97125",
+                                            "id": "25",
+                                            "name": "Peter Parker",
+                                            "crm": "123.789.012-34",
                                             "phone_number": "1691234-5789"
-                                        }
-                                    },
-                                    "DoctorResponseDetailExample2": {
-                                        "value": {
-                                            "id": "2",
-                                            "name": "Guilherme Paiva de Andrade",
-                                            "crm": "2227166511.8576.85126",
-                                            "phone_number": "1699301-9123"
                                         }
                                     }
                                 }
@@ -1492,6 +1325,375 @@
                     "required": true
                 }
             ]
+        },
+        "/v1/doctors/{id}/specialities": {
+            "summary": "Rota de consulta das especialidades de um médico",
+            "description": "Este recurso é a representação da lista de especialidades de um determinado médico da clínica",
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SpecialtiesResponse"
+                                },
+                                "examples": {
+                                    "SpecialitiesResponseExample": {
+                                        "value": "    {\n        \"id\": \"50\",\n        \"name\": \"Cardiologia\",\n        \"description\": \"Cardiologia é a especialidade médica que se ocupa do diagnóstico e tratamento das doenças que acometem o coração bem como os outros componentes do sistema circulatório\"\n    }"
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para consulta das especialidades de um médico"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "UnauthorizedExample": {
+                                        "value": {
+                                            "issue": "NOT_AUTHORIZED",
+                                            "description": "Authorization failed due to insufficient permissions",
+                                            "location": "header",
+                                            "field": "Authorization"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 401 - Unauthorized"
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "ForbiddenExample": {
+                                        "value": {
+                                            "issue": "PERMISSION_DENIED",
+                                            "description": "You do not have permission to access or perform operations on this resource",
+                                            "location": "header",
+                                            "field": "Authorization"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 403 - Forbidden"
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "InternalServerError": {
+                                        "value": {
+                                            "issue": "INTERNAL_SERVER_ERROR",
+                                            "description": "A system or application error occurred"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 500 - Internal Server Error"
+                    },
+                    "502": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "BadGatewayError": {
+                                        "value": {
+                                            "issue": "BAD_GATEWAY",
+                                            "description": "The server returned an invalid response"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 502 - Bad Gateway"
+                    },
+                    "503": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "ServiceUnavailableError": {
+                                        "value": {
+                                            "issue": "SERVICE_UNAVAILABLE",
+                                            "description": "The server cannot handle the request for a service due to temporary maintenance"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 503 - Service Unavailable"
+                    },
+                    "504": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "GatewayTimeoutError": {
+                                        "value": {
+                                            "issue": "GATEWAY_TIMEOUT",
+                                            "description": "The server did not send the response in the expected time"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 504 - Gateway Timeout"
+                    }
+                },
+                "summary": "Consulta de especialidades médicas",
+                "description": "Operação utilizada para consultar todos as especialides de um médico"
+            },
+            "put": {
+                "responses": {
+                    "405": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "MethodNotAllowedExample": {
+                                        "value": {
+                                            "issue": "METHOD_NOT_SUPPORTED",
+                                            "description": "Invalid path and HTTP method combination"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 405 - Method Not Allowed"
+                    }
+                },
+                "summary": "Atualização de especialidades médicas",
+                "description": "Operação utilizada para atualizar todos as especialides de um médico"
+            },
+            "post": {
+                "requestBody": {
+                    "description": "Request para adicionar uma especialidade a um médico",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SpecialitiesRequest"
+                            },
+                            "examples": {
+                                "SpecialitiesRequestExample": {
+                                    "value": {
+                                        "id": "50"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SpecialtiesResponse"
+                                },
+                                "examples": {
+                                    "SpecialitiesResponseExample": {
+                                        "value": "    {\n        \"id\": \"50\",\n        \"name\": \"Cardiologia\",\n        \"description\": \"Cardiologia é a especialidade médica que se ocupa do diagnóstico e tratamento das doenças que acometem o coração bem como os outros componentes do sistema circulatório\"\n    }"
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para adição de especialidades a um médico"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "UnauthorizedExample": {
+                                        "value": {
+                                            "issue": "NOT_AUTHORIZED",
+                                            "description": "Authorization failed due to insufficient permissions",
+                                            "location": "header",
+                                            "field": "Authorization"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 401 - Unauthorized"
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "ForbiddenExample": {
+                                        "value": {
+                                            "issue": "PERMISSION_DENIED",
+                                            "description": "You do not have permission to access or perform operations on this resource",
+                                            "location": "header",
+                                            "field": "Authorization"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 403 - Forbidden"
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "InternalServerError": {
+                                        "value": {
+                                            "issue": "INTERNAL_SERVER_ERROR",
+                                            "description": "A system or application error occurred"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 500 - Internal Server Error"
+                    },
+                    "502": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "BadGatewayError": {
+                                        "value": {
+                                            "issue": "BAD_GATEWAY",
+                                            "description": "The server returned an invalid response"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 502 - Bad Gateway"
+                    },
+                    "503": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "ServiceUnavailableError": {
+                                        "value": {
+                                            "issue": "SERVICE_UNAVAILABLE",
+                                            "description": "The server cannot handle the request for a service due to temporary maintenance"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 503 - Service Unavailable"
+                    },
+                    "504": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "GatewayTimeoutError": {
+                                        "value": {
+                                            "issue": "GATEWAY_TIMEOUT",
+                                            "description": "The server did not send the response in the expected time"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 504 - Gateway Timeout"
+                    }
+                },
+                "summary": "Adição de especialidade para um médico",
+                "description": "Operação utilizada para associar uma especialide a um médico"
+            },
+            "delete": {
+                "responses": {
+                    "405": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "MethodNotAllowedExample": {
+                                        "value": {
+                                            "issue": "METHOD_NOT_SUPPORTED",
+                                            "description": "Invalid path and HTTP method combination"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 405 - Method Not Allowed"
+                    }
+                }
+            },
+            "patch": {
+                "responses": {
+                    "405": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorMessage"
+                                },
+                                "examples": {
+                                    "MethodNotAllowedExample": {
+                                        "value": {
+                                            "issue": "METHOD_NOT_SUPPORTED",
+                                            "description": "Invalid path and HTTP method combination"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Response para erro 405 - Method Not Allowed"
+                    }
+                },
+                "summary": "Atualização de especialidades médicas",
+                "description": "Operação utilizada para atualizar todos as especialides de um médico"
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "description": "Campo identificador do Médico",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "in": "path",
+                    "required": true
+                }
+            ]
         }
     },
     "components": {
@@ -1650,6 +1852,52 @@
                     "crm": "123.789.012-34",
                     "phone_number": "1691234-5789"
                 }
+            },
+            "SpecialtiesResponse": {
+                "title": "Root Type for Specialties",
+                "description": "Objeto que representa uma especialidade médica",
+                "required": [
+                    "description",
+                    "id",
+                    "name"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código da especialidade médica",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Nome da especialidade médica",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Descrição da especialidade médica",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": "50",
+                    "name": "Cardiologia",
+                    "description": "Cardiologia é a especialidade médica que se ocupa do diagnóstico e tratamento das doenças que acometem o coração bem como os outros componentes do sistema circulatório"
+                }
+            },
+            "SpecialitiesRequest": {
+                "title": "Root Type for SpecialitiesRequest",
+                "description": "Objeto que representa o código de uma especialidade médica",
+                "required": [
+                    "id"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código da especialidade médica",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": "50"
+                }
             }
         },
         "responses": {
@@ -1660,20 +1908,12 @@
                             "$ref": "#/components/schemas/DoctorResponseDetail"
                         },
                         "examples": {
-                            "DoctorResponseDetailExample1": {
+                            "DoctorResponseDetailExample": {
                                 "value": {
-                                    "id": "1",
-                                    "name": "Igor Pereira da Silva",
-                                    "crm": "3020156511.9776.97125",
+                                    "id": "25",
+                                    "name": "Peter Parker",
+                                    "crm": "123.789.012-34",
                                     "phone_number": "1691234-5789"
-                                }
-                            },
-                            "DoctorResponseDetailExample2": {
-                                "value": {
-                                    "id": "2",
-                                    "name": "Guilherme Paiva de Andrade",
-                                    "crm": "2227166511.8576.85126",
-                                    "phone_number": "1699301-9123"
                                 }
                             }
                         }
@@ -1839,6 +2079,25 @@
                     }
                 },
                 "description": "Response com os principais campos da entidade Médico"
+            },
+            "SpecialtiesResponse": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/SpecialtiesResponse"
+                        },
+                        "examples": {
+                            "SpecialitiesExample": {
+                                "value": {
+                                    "id": "50",
+                                    "name": "Cardiologia",
+                                    "description": "Cardiologia é a especialidade médica que se ocupa do diagnóstico e tratamento das doenças que acometem o coração bem como os outros componentes do sistema circulatório"
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "Entidade de especialidade médica retornada no response"
             }
         }
     }
