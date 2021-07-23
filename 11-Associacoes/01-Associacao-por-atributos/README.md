@@ -1,9 +1,44 @@
-# Exercício 01 - Associação por atributos
+# Exercício - Associação por atributos
 
-A partir do Apicurito:
-* Abrir o arquivo consultas-openapi-spec.json
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
 
-## Atividade 1 - Criação do Data Type Patient
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "Open API"
+ 
+4 - Abra o conteúdo do arquivo [consultas-openapi-spec.json](consultas-openapi-spec.json)
+
+5 - A tela apresentada deve corresponder a essa:
+
+![print01.png](print01.png)
+
+## Passo a Passo:
+
+### Etapa 1 - Criação do OpenAPI
+
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
+
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "New API"
+
+4 - Na tela principal:
+* Na parte superior da tela, clique no lápis ao lado da palavra "New API" e digite o nome da entidade de negócio:
+````
+Pacientes
+````
+
+* No lado direito da tela, a partir da seção INFO, clique no valor do campo "Description" e fale do que se trata o seu contrato:
+````
+ProHealth - Contrato da API de Pacientes
+````
+
+* Na seção SERVERS, clique em Add a server
+    * No campo Server URL, preencha com: http://localhost:8080 - clique em Apply - clique em Save
+
+### Etapa 2 - Criação do Data Type Patient
 
 Na parte à esquerda da tela, na seção Data Types, no botão `+`
 * Em 1. Enter Basic Information, preencha no campo Name: `Patient`
@@ -30,7 +65,7 @@ phone_number | Número de telefone do paciente | Required | String as String
 
 * Clique no botão `Save`
 
-## Atividade 2 - Criação do Data Type Doctor
+### Etapa 3 - Criação do Data Type Doctor
 
 Na parte à esquerda da tela, na seção Data Types, clique no botão `+`
 * Em 1. Enter Basic Information, preencha no campo Name: `Doctor`
@@ -59,7 +94,7 @@ phone_number | Número de telefone do médico | Required | String as String
 
 * Clique no botão `Save`
 
-## Atividade 3 - Criação do Data Type AppointmentResponse
+### Etapa 4 - Criação do Data Type AppointmentResponse
 
 Na parte à esquerda da tela, na seção Data Types, clique no botão `+`
 * Em 1. Enter Basic Information, preencha no campo Name: `AppointmentResponse`
