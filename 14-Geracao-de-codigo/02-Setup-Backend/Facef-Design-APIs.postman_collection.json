@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "53a85bb4-df3d-4ac5-8d08-8ac43bb026a9",
+		"name": "Facef-Design-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Backend - Doctors",
+			"item": [
+				{
+					"name": "Doctors by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/doctors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
