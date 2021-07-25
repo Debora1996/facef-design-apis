@@ -10,4 +10,6 @@ https://swagger.io/tools/swagger-editor/
 
 - No menu superior -> Generate Server -> (escolher linguagem/framework)
 
-- Descompactar o .zip que foi baixado em um editor de código de preferência
+- Descompactar o .zip que foi baixado 
+
+- Abrir o código-fonte em um editor de código de preferência
