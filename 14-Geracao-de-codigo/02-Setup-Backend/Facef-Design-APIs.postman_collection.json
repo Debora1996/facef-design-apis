@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Backend - Doctors",
+			"name": "Backend",
 			"item": [
 				{
 					"name": "Doctors by ID",
@@ -20,6 +20,32 @@
 								"localhost"
 							],
 							"port": "8080",
+							"path": [
+								"v1",
+								"doctors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kong",
+			"item": [
+				{
+					"name": "Doctors by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/v1/doctors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
 							"path": [
 								"v1",
 								"doctors",

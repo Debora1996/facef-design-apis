@@ -39,7 +39,16 @@ docker run -d --name kong \
      kong:latest
 ```
 
-Testar o funcionamento do backend:
+## Atividade 4 - Testar o funcionamento da API exposta pelo Kong:
+
+- Opção 1 - A partir do Postman
+    - Abra o Postman 
+    - Execute o request a partir de `Facef-Design-APIs / Kong / Doctors by ID`
+
+- Opção 2 - A partir do curl
+
+ A partir do terminal, execute o comando:
 ```
 curl -v http://localhost:8000/v1/doctors/1
 ```
+
