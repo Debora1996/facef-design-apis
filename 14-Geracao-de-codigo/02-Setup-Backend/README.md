@@ -19,3 +19,13 @@ docker container run -p 8080:8080 -d --name facef-design-apis-doctors marcelofel
 ```
 curl -v http://localhost:8080/v1/doctors/1
 ```
+
+- O resultado deve ser:
+```
+{
+    "id": "25",
+    "name": "Peter Parker",
+    "crm": "123.789.012-34",
+    "phone_number": "1691234-5789"
+}
+```

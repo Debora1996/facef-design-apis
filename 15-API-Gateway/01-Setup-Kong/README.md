@@ -52,3 +52,12 @@ docker run -d --name kong \
 curl -v http://localhost:8000/v1/doctors/1
 ```
 
+- O resultado deve ser:
+```
+{
+    "id": "25",
+    "name": "Peter Parker",
+    "crm": "123.789.012-34",
+    "phone_number": "1691234-5789"
+}
+```
