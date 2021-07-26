@@ -1,15 +1,27 @@
 # Exercício 05 - Rate Limiting
 
-## Atividade 1 - Setup do plugin de Rate Limiting
+## Atividade 1 - Atualizar o Declarative Config
 
-Fazer o download do arquivo kong.yml para uma pasta na sua máquina
+- A partir da pasta do declarative config, executar:
+
+(Linux ou MacOS)
+```
+cp $FACEF_DESIGN_APIS/15-API-Gateway/05-Rate-Limiting/kong.yml .
+```
+
+(Windows)
+```
+cp %FACEF_DESIGN_APIS\15-API-Gateway\05-Rate-Limiting\kong.yml .
+```
+
+## Atividade 2 - Reiniciar o Kong
 
 Executar no terminal:
 ```
 docker container restart kong
 ```
 
-Invocar a API de consulta de médico 3 vezes seguidas
+## Atividade 3 - Invocar a API de consulta de médico 3 vezes seguidas
 ```
 curl -v http://localhost:8000/v1/doctors/1
 ```

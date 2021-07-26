@@ -1,13 +1,27 @@
 # Exercício 03 - Correlation ID
 
-## Atividade 1 - Setup do plugin de Correlation ID
+## Atividade 1 - Atualizar o Declarative Config
 
-Fazer o download do arquivo kong.yml para uma pasta na sua máquina
+- A partir da pasta do declarative config, executar:
+
+(Linux ou MacOS)
+```
+cp $FACEF_DESIGN_APIS/15-API-Gateway/03-Correlation-ID/kong.yml .
+```
+
+(Windows)
+```
+cp %FACEF_DESIGN_APIS\15-API-Gateway\03-Correlation-ID\kong.yml .
+```
+
+## Atividade 2 - Reiniciar o Kong
 
 Executar no terminal:
 ```
 docker container restart kong
 ```
+
+## Atividade 3 - Testar a chamada da API
 
 Invocar a API de consulta de médico:
 ```

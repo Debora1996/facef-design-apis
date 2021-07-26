@@ -1,8 +1,20 @@
 # Exercício 02 - Key Authentication
 
-## Atividade 1 - Setup do plugin de Key Authentication
+## Atividade 1 - Atualizar o Declarative Config
 
-Fazer o download do arquivo kong.yml para uma pasta na sua máquina
+- A partir da pasta do declarative config, executar:
+
+(Linux ou MacOS)
+```
+cp $FACEF_DESIGN_APIS/15-API-Gateway/02-Key-Authentication/kong.yml .
+```
+
+(Windows)
+```
+cp %FACEF_DESIGN_APIS\15-API-Gateway\02-Key-Authentication\kong.yml .
+```
+
+## Atividade 2 - Reiniciar o Kong
 
 Executar no terminal:
 ```

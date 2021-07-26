@@ -1,6 +1,6 @@
 # Exercício 06 - Response Transformer
 
-## Atividade 1 - Consulta depois da transformação do response
+## Atividade 1 - Consulta antes da transformação do response
 
 Invocar a API de consulta de médico
 ```
@@ -17,16 +17,27 @@ O body do request deve trazer os quatro campos abaixo:
 }
 ```
 
-## Atividade 2 - Setup do plugin de Response Transformer
+## Atividade 2 - Atualizar o Declarative Config
 
-Fazer o download do arquivo kong.yml para uma pasta na sua máquina
+- A partir da pasta do declarative config, executar:
+
+(Linux ou MacOS)
+```
+cp $FACEF_DESIGN_APIS/15-API-Gateway/06-Response-Transformer/kong.yml .
+```
+
+(Windows)
+```
+cp %FACEF_DESIGN_APIS\15-API-Gateway\06-Response-Transformerkong.yml .
+```
+
+## Atividade 3 - Reiniciar o Kong
 
 Executar no terminal:
 ```
 docker container restart kong
 ```
-
-## Atividade 3 - Consulta depois da transformação do response
+## Atividade 4 - Consulta depois da transformação do response
 
 Invocar a API de consulta de médico
 ```
