@@ -102,23 +102,23 @@ docker run -d --name kong \
 
 ## Atividade 7 - Testar o funcionamento da API exposta pelo Kong:
 
-- Opção 1 - A partir do Postman
-    - Abra o Postman 
-    - Execute o request a partir de `Facef-Design-APIs / Kong / Doctors by ID`
+### Opção 1 - A partir do Postman
 
-- Opção 2 - A partir do curl
+- Abra o Postman 
 
- A partir do terminal, execute o comando:
+- Execute o request a partir de `Facef-Design-APIs / Kong / 01-Setup-Kong / Doctors by ID`
+
+- O resultado deve ser:
+
+![print_postman.png](print_postman.png)
+
+### Opção 2 - A partir do curl
+
+- A partir do terminal, execute o comando:
 ```
 curl -v http://localhost:8000/v1/doctors/1
 ```
 
 - O resultado deve ser:
-```
-{
-    "id": "25",
-    "name": "Peter Parker",
-    "crm": "123.789.012-34",
-    "phone_number": "1691234-5789"
-}
-```
+
+![print_curl.png](print_curl.png)

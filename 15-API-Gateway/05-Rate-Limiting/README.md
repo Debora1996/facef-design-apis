@@ -22,6 +22,10 @@ docker container restart kong
 ```
 
 ## Atividade 3 - Invocar a API de consulta de médico 3 vezes seguidas
+
+### Opção 1 - A partir do Postman
+### Opção 2 - A partir do curl
+
 ```
 curl -v http://localhost:8000/v1/doctors/1
 ```

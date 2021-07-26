@@ -2,6 +2,9 @@
 
 ## Atividade 1 - Consulta antes da transformação do response
 
+### Opção 1 - A partir do Postman
+### Opção 2 - A partir do curl
+
 Invocar a API de consulta de médico
 ```
 curl -v http://localhost:8000/v1/doctors/1
@@ -38,6 +41,9 @@ Executar no terminal:
 docker container restart kong
 ```
 ## Atividade 4 - Consulta depois da transformação do response
+
+### Opção 1 - A partir do Postman
+### Opção 2 - A partir do curl
 
 Invocar a API de consulta de médico
 ```

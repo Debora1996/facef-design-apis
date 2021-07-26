@@ -9,11 +9,18 @@ docker container run -p 8080:8080 -d --name facef-design-apis-doctors marcelofel
 
 ## Atividade 2 - Testar o funcionamento do backend:
 
-- Opção 1 - A partir do Postman
-    - Abra o Postman e importe a coleção [Facef-Design-APIs.postman_collection.json](Facef-Design-APIs.postman_collection.json)
-    - Execute o request a partir de `Facef-Design-APIs / Backend  / Doctors by ID`
+### Opção 1 - A partir do Postman
 
-- Opção 2 - A partir do curl
+- Abra o Postman e importe a coleção [Facef-Design-APIs.postman_collection.json](Facef-Design-APIs.postman_collection.json)
+
+- Execute o request a partir de `Facef-Design-APIs / Backend  / Doctors by ID`
+
+- O resultado deve ser:
+
+![print_postman.png](print_postman.png)
+
+
+### Opção 2 - A partir do curl
 
  A partir do terminal, execute o comando:
 ```
@@ -21,11 +28,5 @@ curl -v http://localhost:8080/v1/doctors/1
 ```
 
 - O resultado deve ser:
-```
-{
-    "id": "25",
-    "name": "Peter Parker",
-    "crm": "123.789.012-34",
-    "phone_number": "1691234-5789"
-}
-```
+
+![print_curl.png](print_curl.png)
