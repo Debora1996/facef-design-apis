@@ -35,25 +35,154 @@
 			"name": "Kong",
 			"item": [
 				{
-					"name": "Doctors by ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8000/v1/doctors/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"v1",
-								"doctors",
-								"1"
-							]
+					"name": "01-Setup-Kong",
+					"item": [
+						{
+							"name": "Doctors by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/v1/doctors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"doctors",
+										"1"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
+				},
+				{
+					"name": "02-Key-Authentication",
+					"item": [
+						{
+							"name": "Doctors by ID - Com API Key",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "apikey",
+										"value": "CHAVE_CONSUMIDOR",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/v1/doctors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"doctors",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Doctors by ID - Sem API Key",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/v1/doctors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"doctors",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Kong key-auths",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8001/key-auths",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"key-auths"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "03-Correlation-ID",
+					"item": [
+						{
+							"name": "Doctors by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/v1/doctors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"doctors",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "04-Cache",
+					"item": [
+						{
+							"name": "Doctors by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/v1/doctors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"doctors",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
