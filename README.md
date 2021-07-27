@@ -37,3 +37,8 @@ Em cada uma das pastas do projeto, estão exercícios relativos à design e expo
     ├── 11-Associacoes                  # Associações entre recursos
     ├── 14-Geracao-de-codigo            # Geração de código a partir do OpenAPI
     └── 15-API-Gateway                  # Exposição de API através de um API Gateway
+
+
+## Authors
+
+- [@marcelofelix-luizalabs](https://github.com/marcelofelix-luizalabs)
