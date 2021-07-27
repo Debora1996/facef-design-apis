@@ -24,15 +24,21 @@ docker container restart kong
 ## Atividade 3 - Invocar a API de consulta de médico 3 vezes seguidas
 
 ### Opção 1 - A partir do Postman
+
+- A partir do Postman , executar repetidas vezes o request a partir de `Facef-Design-APIs / Kong / 05-Rate-Limiting / Doctors by ID`
+
+- A partir da quarta chamada o resultado deve ser:
+
+![print_postman.png](print_postman.png)
+
 ### Opção 2 - A partir do curl
+
+- Executar o comando abaixo seguidas vezes:
 
 ```
 curl -v http://localhost:8000/v1/doctors/1
 ```
 
-Na quarta tentativa o retorno da API deveria ser:
+- A partir da quarta chamada o resultado deve ser:
 
-HTTP/1.1 429 Too Many Requests
-{
-  "message":"API rate limit exceeded"
-}
+![print_curl.png](print_curl.png)
