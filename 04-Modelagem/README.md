@@ -11,12 +11,10 @@ Você foi contratado pela ProHealth, uma clínica médica recém-criada, que des
 A idéia é que você exponha as APIs desse serviço, de forma que sejam genéricas o suficiente para que sejam utilizadas por qualquer um dos quatro canais de atendimento.
 
 A partir de interações com analistas de negócio da clínica, você descobre uma série de funcionalidades desejadas:
-- Cadastro de pacientes 
+- Cadastro de pacientes
 - Cadastro de médicos e suas especialidades
-- Possibilidade do paciente marcar uma consulta a partir da agenda do médico
-- Alteração e cancelamento de consulta marcada
-
-Obs: Para as consultas particulares, a clínica pode cobrar valores diferentes de cada paciente, dependendo de alguns critérios pré-estabelecidos (ex: primeira consulta, consulta regular, etc). Para cada preço cobrado do paciente, é importante que a clínica tenha o controle do valor a ser repassado para o médico.
+- Marcação de consultas
+- Tabela de preços de consultas
 
 ## Atividade 1 - Identificação de entidades
 
