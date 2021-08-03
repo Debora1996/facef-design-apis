@@ -25,7 +25,7 @@ docker container restart kong
 
 ### Opção 1 - A partir do Postman
 
-- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Kong / 04-Cache / Doctors by ID`
+- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Gateway / 01-Setup-Kong / Get Patient by ID`
 
 - O resultado deve ser:
 
@@ -33,9 +33,9 @@ docker container restart kong
 
 ### Opção 2 - A partir do curl
 
-- Invocar a API de consulta de médico (1a chamada - sem cache):
+- Invocar a API de consulta de paciente (1a chamada - sem cache):
 ```
-curl -v http://localhost:8000/v1/doctors/1
+curl -v GET 'http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1'
 ```
 
 - Verifique os três headers na resposta:
@@ -49,7 +49,7 @@ curl -v http://localhost:8000/v1/doctors/1
 
 ### Opção 1 - A partir do Postman
 
-- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Kong / 04-Cache / Doctors by ID`
+- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Gateway / 01-Setup-Kong / Get Patient by ID`
 
 - O resultado deve ser:
 
@@ -57,9 +57,9 @@ curl -v http://localhost:8000/v1/doctors/1
 
 ### Opção 2 - A partir do curl
 
-- Invocar a API de consulta de médico (2a chamada - com cache):
+- Invocar a API de consulta de paciente (2a chamada - com cache):
 ```
-curl -v http://localhost:8000/v1/doctors/1
+curl -v GET 'http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1'
 ```
 
 - Verifique os três headers na resposta:

@@ -1,6 +1,6 @@
 # Exercício - OpenAPI
 
-## Atividade - Criação do OpenAPI
+## Preview do resultado final:
 
 1 - Abra a ferramenta:
 https://www.apicur.io/apicurito/

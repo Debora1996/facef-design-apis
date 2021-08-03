@@ -1,0 +1,30 @@
+_format_version: "2.1"
+_transform: true
+
+services:
+- name: patients-service
+  url: http://facef-design-apis-patients:8080
+  routes:
+  - name: get-patients
+    paths:
+    - /
+
+plugins:
+- name: response-transformer
+  route: get-patients
+  config: 
+    remove:
+      json:
+      - id
+      - cpf
+      - phone_number
+      - birthdate
+      - height
+      - weight
+      - smoker
+      - comorbidities
+      - medical_insurance
+      - address
+    add:
+      json:
+      - title:Sr

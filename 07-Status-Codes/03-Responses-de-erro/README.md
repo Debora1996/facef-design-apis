@@ -1,5 +1,7 @@
 # Exercício - Responses de erro
 
+## Preview do resultado final:
+
 1 - Abra a ferramenta:
 https://www.apicur.io/apicurito/
 

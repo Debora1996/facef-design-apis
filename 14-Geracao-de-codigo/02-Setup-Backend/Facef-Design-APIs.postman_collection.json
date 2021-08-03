@@ -9,12 +9,12 @@
 			"name": "Backend",
 			"item": [
 				{
-					"name": "Doctors by ID",
+					"name": "Get Patient list",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/v1/doctors/1",
+							"raw": "http://localhost:8080/v1/patients",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -22,8 +22,120 @@
 							"port": "8080",
 							"path": [
 								"v1",
-								"doctors",
-								"1"
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients",
+								"3dc97efc-1b5b-492c-905c-449677b390e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Patient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Marcio Andrade\",\n    \"cpf\": \"123.345.789-0\",\n    \"phone_number\": \"11-91111-4394\",\n    \"birthdate\": \"2001-08-10\",\n    \"height\": {\n      \"value\": 1.78,\n      \"unit\": \"m\"\n    },\n    \"weight\": {\n      \"value\": 80,\n      \"unit\": \"kg\"\n    },\n    \"smoker\": false,\n    \"comorbidities\": [\"Cirrose hepática\", \"Valvopatia\"],\n    \"medical_insurance\": {\n        \"id\": \"324.5231100.3432\",\n        \"operator_code\": \"AMIL\"\n    },\n    \"address\": {\n        \"street\": \"Rua Luis Gois, 1200\",\n        \"complement\": \"apto 204\",\n        \"district\": \"Vila Mariana\",\n        \"city\": \"São Paulo\",\n        \"state\": \"SP\",\n        \"zipcode\": \"04043-050\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/patients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"3dc97efc-1b5b-492c-905c-449677b390e1\",\n    \"name\": \"Marcio Andrade\",\n    \"cpf\": \"123.345.789-0\",\n    \"phone_number\": \"11-91111-4394\",\n    \"birthdate\": \"2001-08-10\",\n    \"height\": {\n      \"value\": 1.78,\n      \"unit\": \"m\"\n    },\n    \"weight\": {\n      \"value\": 80,\n      \"unit\": \"kg\"\n    },\n    \"smoker\": false,\n    \"comorbidities\": [\"Cirrose hepática\", \"Valvopatia\"],\n    \"medical_insurance\": {\n        \"id\": \"324.5231100.3432\",\n        \"operator_code\": \"AMIL\"\n    },\n    \"address\": {\n        \"street\": \"Rua Luis Gois, 1200\",\n        \"complement\": \"apto 204\",\n        \"district\": \"Vila Mariana\",\n        \"city\": \"São Paulo\",\n        \"state\": \"SP\",\n        \"zipcode\": \"04043-050\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients",
+								"3dc97efc-1b5b-492c-905c-449677b390e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"patients",
+								"3dc97efc-1b5b-492c-905c-449677b390e1"
 							]
 						}
 					},
@@ -32,18 +144,18 @@
 			]
 		},
 		{
-			"name": "Kong",
+			"name": "Gateway",
 			"item": [
 				{
 					"name": "01-Setup-Kong",
 					"item": [
 						{
-							"name": "Doctors by ID",
+							"name": "Get Patient by ID",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8000/v1/doctors/1",
+									"raw": "http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -51,8 +163,8 @@
 									"port": "8000",
 									"path": [
 										"v1",
-										"doctors",
-										"1"
+										"patients",
+										"3dc97efc-1b5b-492c-905c-449677b390e1"
 									]
 								}
 							},
@@ -64,39 +176,12 @@
 					"name": "02-Key-Authentication",
 					"item": [
 						{
-							"name": "Doctors by ID - Com API Key",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "apikey",
-										"value": "CHAVE_CONSUMIDOR",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "http://localhost:8000/v1/doctors/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8000",
-									"path": [
-										"v1",
-										"doctors",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Doctors by ID - Sem API Key",
+							"name": "Get Patient by ID - Sem API Key",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8000/v1/doctors/1",
+									"raw": "http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -104,8 +189,8 @@
 									"port": "8000",
 									"path": [
 										"v1",
-										"doctors",
-										"1"
+										"patients",
+										"3dc97efc-1b5b-492c-905c-449677b390e1"
 									]
 								}
 							},
@@ -129,19 +214,20 @@
 								}
 							},
 							"response": []
-						}
-					]
-				},
-				{
-					"name": "03-Correlation-ID",
-					"item": [
+						},
 						{
-							"name": "Doctors by ID",
+							"name": "Get Patient by ID - Com API Key",
 							"request": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "apikey",
+										"value": "CHAVE_CONSUMIDOR",
+										"type": "text"
+									}
+								],
 								"url": {
-									"raw": "http://localhost:8000/v1/doctors/1",
+									"raw": "http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -149,86 +235,8 @@
 									"port": "8000",
 									"path": [
 										"v1",
-										"doctors",
-										"1"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "04-Cache",
-					"item": [
-						{
-							"name": "Doctors by ID",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8000/v1/doctors/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8000",
-									"path": [
-										"v1",
-										"doctors",
-										"1"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "05-Rate-Limiting",
-					"item": [
-						{
-							"name": "Doctors by ID",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8000/v1/doctors/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8000",
-									"path": [
-										"v1",
-										"doctors",
-										"1"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "06-Response-Transformer",
-					"item": [
-						{
-							"name": "Doctors by ID",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8000/v1/doctors/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8000",
-									"path": [
-										"v1",
-										"doctors",
-										"1"
+										"patients",
+										"3dc97efc-1b5b-492c-905c-449677b390e1"
 									]
 								}
 							},

@@ -4,7 +4,7 @@
 
 ### Opção 1 - A partir do Postman
 
-- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Kong / 06-Response-Transformer / Doctors by ID`
+- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Gateway / 01-Setup-Kong / Get Patient by ID`
 
 - O resultado deve ser:
 
@@ -13,9 +13,9 @@
 
 ### Opção 2 - A partir do curl
 
-- Invocar a API de consulta de médico
+- Invocar a API de consulta de paciente
 ```
-curl -v http://localhost:8000/v1/doctors/1
+curl 'http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1'
 ```
 
 - O body do request deve trazer os quatro campos abaixo:
@@ -28,12 +28,12 @@ curl -v http://localhost:8000/v1/doctors/1
 
 (Linux ou MacOS)
 ```
-cp $FACEF_DESIGN_APIS/15-API-Gateway/06-Response-Transformer/kong.yml .
+cp $FACEF_DESIGN_APIS/15-API-Gateway/05-Response-Transformer/kong.yml .
 ```
 
 (Windows)
 ```
-cp %FACEF_DESIGN_APIS\15-API-Gateway\06-Response-Transformerkong.yml .
+cp %FACEF_DESIGN_APIS\15-API-Gateway\05-Response-Transformerkong.yml .
 ```
 
 ## Atividade 3 - Reiniciar o Kong
@@ -46,7 +46,7 @@ docker container restart kong
 
 ### Opção 1 - A partir do Postman
 
-- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Kong / 06-Response-Transformer / Doctors by ID`
+- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Gateway / 01-Setup-Kong / Get Patient by ID`
 
 - O resultado deve ser:
 
@@ -55,9 +55,9 @@ docker container restart kong
 
 ### Opção 2 - A partir do curl
 
-Invocar a API de consulta de médico
+Invocar a API de consulta de paciente
 ```
-curl -v http://localhost:8000/v1/doctors/1
+curl 'http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1'
 ```
 
 O body do request deve trazer um campo novo "title" e sem os campos "crm" e "phone_number":

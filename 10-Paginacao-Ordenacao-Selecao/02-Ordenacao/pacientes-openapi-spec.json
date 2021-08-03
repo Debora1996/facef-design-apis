@@ -26,7 +26,8 @@
                         "in": "query"
                     },
                     {
-                        "name": "name | Nome completo do paciente",
+                        "name": "name",
+                        "description": "Nome completo do paciente",
                         "schema": {
                             "type": "string"
                         },
@@ -84,60 +85,6 @@
                         "in": "query"
                     },
                     {
-                        "name": "height",
-                        "description": "Altura do paciente",
-                        "schema": {
-                            "format": "double",
-                            "type": "number"
-                        },
-                        "in": "query"
-                    },
-                    {
-                        "name": "height_greater",
-                        "description": "Altura inicial do paciente",
-                        "schema": {
-                            "format": "double",
-                            "type": "number"
-                        },
-                        "in": "query"
-                    },
-                    {
-                        "name": "height_lesser",
-                        "description": "Altura final do paciente",
-                        "schema": {
-                            "format": "double",
-                            "type": "number"
-                        },
-                        "in": "query"
-                    },
-                    {
-                        "name": "weight",
-                        "description": "Peso do paciente",
-                        "schema": {
-                            "format": "double",
-                            "type": "number"
-                        },
-                        "in": "query"
-                    },
-                    {
-                        "name": "weight_greater",
-                        "description": "Peso inicial do paciente",
-                        "schema": {
-                            "format": "double",
-                            "type": "number"
-                        },
-                        "in": "query"
-                    },
-                    {
-                        "name": "weight_lesser",
-                        "description": "Peso final do paciente",
-                        "schema": {
-                            "format": "double",
-                            "type": "number"
-                        },
-                        "in": "query"
-                    },
-                    {
                         "name": "smoker",
                         "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
                         "schema": {
@@ -146,40 +93,16 @@
                         "in": "query"
                     },
                     {
-                        "name": "address.city",
-                        "description": "Nome da cidade",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "in": "query"
-                    },
-                    {
-                        "name": "address.city_contains",
-                        "description": "Nome da cidade",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "in": "query"
-                    },
-                    {
-                        "name": "address.state",
-                        "description": "Nome do estado",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "in": "query"
-                    },
-                    {
-                        "name": "_limit",
-                        "description": "Número de elementos retornado por página (default 50)",
+                        "name": "_offset",
+                        "description": "Posição do elemento inicial (default 0)",
                         "schema": {
                             "type": "integer"
                         },
                         "in": "query"
                     },
                     {
-                        "name": "_offset",
-                        "description": "Posição do elemento inicial (default 0)",
+                        "name": "_limit",
+                        "description": "Número de elementos retornado por página (default 50)",
                         "schema": {
                             "type": "integer"
                         },
@@ -246,12 +169,18 @@
                             "examples": {
                                 "PatientsRequestExample": {
                                     "value": {
-                                        "name": "Peter Parker",
-                                        "cpf": "123.789.012-34",
-                                        "phone_number": "1691234-5789",
+                                        "name": "Marcio Andrade",
+                                        "cpf": "123.345.789-0",
+                                        "phone_number": "11-91111-4394",
                                         "birthdate": "2001-08-10",
-                                        "height": 1.78,
-                                        "weight": 76,
+                                        "height": {
+                                            "value": 1.78,
+                                            "unit": "m"
+                                        },
+                                        "weight": {
+                                            "value": 80,
+                                            "unit": "kg"
+                                        },
                                         "smoker": false,
                                         "comorbidities": [
                                             "Cirrose hepática",
@@ -371,12 +300,19 @@
                             "examples": {
                                 "PatientsRequestExample": {
                                     "value": {
-                                        "name": "Peter Parker",
-                                        "cpf": "123.789.012-34",
-                                        "phone_number": "1691234-5789",
+                                        "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+                                        "name": "Marcio Andrade",
+                                        "cpf": "123.345.789-0",
+                                        "phone_number": "11-91111-4394",
                                         "birthdate": "2001-08-10",
-                                        "height": 1.78,
-                                        "weight": 76,
+                                        "height": {
+                                            "value": 1.78,
+                                            "unit": "m"
+                                        },
+                                        "weight": {
+                                            "value": 80,
+                                            "unit": "kg"
+                                        },
                                         "smoker": false,
                                         "comorbidities": [
                                             "Cirrose hepática",
@@ -489,12 +425,19 @@
                             "examples": {
                                 "PatientsRequestExample": {
                                     "value": {
-                                        "name": "Peter Parker",
-                                        "cpf": "123.789.012-34",
-                                        "phone_number": "1691234-5789",
+                                        "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+                                        "name": "Marcio Andrade",
+                                        "cpf": "123.345.789-0",
+                                        "phone_number": "11-91111-4394",
                                         "birthdate": "2001-08-10",
-                                        "height": 1.78,
-                                        "weight": 76,
+                                        "height": {
+                                            "value": 1.78,
+                                            "unit": "m"
+                                        },
+                                        "weight": {
+                                            "value": 80,
+                                            "unit": "kg"
+                                        },
                                         "smoker": false,
                                         "comorbidities": [
                                             "Cirrose hepática",
@@ -572,6 +515,54 @@
     },
     "components": {
         "schemas": {
+            "Height": {
+                "title": "Root Type for Height",
+                "description": "Objeto que representa a altura de uma pessoa",
+                "required": [
+                    "unit",
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "format": "double",
+                        "description": "Valor da medida de altura de uma pessoa",
+                        "type": "number"
+                    },
+                    "unit": {
+                        "description": "Unidade de medida da altura",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "value": 1.78,
+                    "unit": "m"
+                }
+            },
+            "Weight": {
+                "title": "Root Type for Weight",
+                "description": "Objeto que representa o peso de uma pessoa",
+                "required": [
+                    "unit",
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "format": "double",
+                        "description": "Valor da medida de peso de uma pessoa",
+                        "type": "number"
+                    },
+                    "unit": {
+                        "description": "Unidade de medida do peso",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "value": 1.78,
+                    "unit": "m"
+                }
+            },
             "MedicalInsurance": {
                 "title": "Root Type for MedicalInsurance",
                 "description": "Objeto que representa o plano de saúde de um paciente",
@@ -678,14 +669,30 @@
                         "type": "string"
                     },
                     "height": {
-                        "format": "double",
+                        "$ref": "#/components/schemas/Height",
                         "description": "Altura do paciente",
-                        "type": "number"
+                        "properties": {
+                            "value": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "weight": {
-                        "format": "int32",
+                        "$ref": "#/components/schemas/Weight",
                         "description": "Peso do paciente",
-                        "type": "integer"
+                        "properties": {
+                            "value": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "smoker": {
                         "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
@@ -736,13 +743,19 @@
                     }
                 },
                 "example": {
-                    "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
-                    "name": "Peter Parker",
-                    "cpf": "123.789.012-34",
-                    "phone_number": "1691234-5789",
+                    "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+                    "name": "Marcio Andrade",
+                    "cpf": "123.345.789-0",
+                    "phone_number": "11-91111-4394",
                     "birthdate": "2001-08-10",
-                    "height": 1.78,
-                    "weight": 76,
+                    "height": {
+                        "value": 1.78,
+                        "unit": "m"
+                    },
+                    "weight": {
+                        "value": 80,
+                        "unit": "kg"
+                    },
                     "smoker": false,
                     "comorbidities": [
                         "Cirrose hepática",
@@ -762,9 +775,38 @@
                     }
                 }
             },
+            "PatientsResponseList": {
+                "title": "Root Type for PatientsResponse",
+                "description": "Representa uma lista de pacientes da clínica - utilizado no response da consulta do objeto de coleção",
+                "required": [
+                    "cpf",
+                    "id",
+                    "name"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código único identificador do paciente",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Nome completo do paciente",
+                        "type": "string"
+                    },
+                    "cpf": {
+                        "description": "Documento de identificação do paciente - CPF",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+                    "name": "Marcio Andrade",
+                    "cpf": "123.345.789-0"
+                }
+            },
             "PatientsRequest": {
                 "title": "Root Type for PatientsResponse",
-                "description": "Representa um paciente da clínica - utilizado no request da consulta do objeto de instância",
+                "description": "Representa um paciente da clínica - utilizado no request de criação do objeto de instância",
                 "required": [
                     "address",
                     "birthdate",
@@ -794,14 +836,30 @@
                         "type": "string"
                     },
                     "height": {
-                        "format": "double",
+                        "$ref": "#/components/schemas/Height",
                         "description": "Altura do paciente",
-                        "type": "number"
+                        "properties": {
+                            "value": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "weight": {
-                        "format": "int32",
+                        "$ref": "#/components/schemas/Weight",
                         "description": "Peso do paciente",
-                        "type": "integer"
+                        "properties": {
+                            "value": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "smoker": {
                         "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
@@ -852,12 +910,18 @@
                     }
                 },
                 "example": {
-                    "name": "Peter Parker",
-                    "cpf": "123.789.012-34",
-                    "phone_number": "1691234-5789",
+                    "name": "Marcio Andrade",
+                    "cpf": "123.345.789-0",
+                    "phone_number": "11-91111-4394",
                     "birthdate": "2001-08-10",
-                    "height": 1.78,
-                    "weight": 76,
+                    "height": {
+                        "value": 1.78,
+                        "unit": "m"
+                    },
+                    "weight": {
+                        "value": 80,
+                        "unit": "kg"
+                    },
                     "smoker": false,
                     "comorbidities": [
                         "Cirrose hepática",
@@ -877,38 +941,9 @@
                     }
                 }
             },
-            "PatientsResponseList": {
-                "title": "Root Type for PatientsResponse",
-                "description": "Representa um paciente da clínica - utilizado no request da consulta do objeto de coleção",
-                "required": [
-                    "cpf",
-                    "id",
-                    "name"
-                ],
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "description": "Código único identificador do paciente",
-                        "type": "string"
-                    },
-                    "name": {
-                        "description": "Nome completo do paciente",
-                        "type": "string"
-                    },
-                    "cpf": {
-                        "description": "Documento de identificação do paciente - CPF",
-                        "type": "string"
-                    }
-                },
-                "example": {
-                    "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
-                    "name": "Peter Parker",
-                    "cpf": "123.789.012-34"
-                }
-            },
             "PatientsRequestPatch": {
                 "title": "Root Type for PatientsResponse",
-                "description": "Representa um paciente da clínica - utilizado no request da consulta do objeto de instância (específico para operação PATCH)",
+                "description": "Representa um paciente da clínica - utilizado no request de alteração do objeto de instância (específico para operação PATCH)",
                 "required": [],
                 "type": "object",
                 "properties": {
@@ -930,14 +965,30 @@
                         "type": "string"
                     },
                     "height": {
-                        "format": "double",
+                        "$ref": "#/components/schemas/Height",
                         "description": "Altura do paciente",
-                        "type": "number"
+                        "properties": {
+                            "value": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "weight": {
-                        "format": "int32",
+                        "$ref": "#/components/schemas/Weight",
                         "description": "Peso do paciente",
-                        "type": "integer"
+                        "properties": {
+                            "value": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "smoker": {
                         "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
@@ -988,12 +1039,18 @@
                     }
                 },
                 "example": {
-                    "name": "Peter Parker",
-                    "cpf": "123.789.012-34",
-                    "phone_number": "1691234-5789",
+                    "name": "Marcio Andrade",
+                    "cpf": "123.345.789-0",
+                    "phone_number": "11-91111-4394",
                     "birthdate": "2001-08-10",
-                    "height": 1.78,
-                    "weight": 76,
+                    "height": {
+                        "value": 1.78,
+                        "unit": "m"
+                    },
+                    "weight": {
+                        "value": 80,
+                        "unit": "kg"
+                    },
                     "smoker": false,
                     "comorbidities": [
                         "Cirrose hepática",
@@ -1024,7 +1081,7 @@
                 "type": "object",
                 "properties": {
                     "issue": {
-                        "description": "Código do erro | Required",
+                        "description": "Código identificador específico para o cenário de erro",
                         "type": "string"
                     },
                     "description": {
@@ -1063,13 +1120,19 @@
                         "examples": {
                             "PatientsResponseExample": {
                                 "value": {
-                                    "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
-                                    "name": "Peter Parker",
-                                    "cpf": "123.789.012-34",
-                                    "phone_number": "1691234-5789",
+                                    "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+                                    "name": "Marcio Andrade",
+                                    "cpf": "123.345.789-0",
+                                    "phone_number": "11-91111-4394",
                                     "birthdate": "2001-08-10",
-                                    "height": 1.78,
-                                    "weight": 76,
+                                    "height": {
+                                        "value": 1.78,
+                                        "unit": "m"
+                                    },
+                                    "weight": {
+                                        "value": 80,
+                                        "unit": "kg"
+                                    },
                                     "smoker": false,
                                     "comorbidities": [
                                         "Cirrose hepática",
@@ -1098,19 +1161,55 @@
                 "content": {
                     "application/json": {
                         "schema": {
-                            "$ref": "#/components/schemas/PatientsResponseList"
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/PatientsResponseList"
+                            }
                         },
                         "examples": {
                             "PatientsResponseListExample": {
-                                "value": {
-                                    "id": "324.5231100.3432",
-                                    "operator_code": "AMIL"
-                                }
+                                "value": [
+                                    {
+                                        "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+                                        "name": "Marcio Andrade",
+                                        "cpf": "123.345.789-0"
+                                    },
+                                    {
+                                        "id": "9ed9bf5b-2a3b-4f07-b908-981291d30965",
+                                        "name": "Sarah Gomes Correia",
+                                        "cpf": "788.205.510-71"
+                                    },
+                                    {
+                                        "id": "920d5b83-89a9-4408-bd5d-c978c4eb78e3",
+                                        "name": "Flavio Felipe Inacio",
+                                        "cpf": "737.775.330-76"
+                                    },
+                                    {
+                                        "id": "17d4eae8-ff5e-4081-9ef1-c7d8d4c9c051",
+                                        "name": "Simone Maria dos Santos",
+                                        "cpf": "917.010.320-82"
+                                    },
+                                    {
+                                        "id": "899a8ccf-9a6f-45f1-9277-9326c788378f",
+                                        "name": "Ronaldo de Souza Oliveira",
+                                        "cpf": "772.744.020-56"
+                                    },
+                                    {
+                                        "id": "415bfbb1-4620-44b6-b05c-75c2da38a0db",
+                                        "name": "Rita Vieira da Rosa",
+                                        "cpf": "605.666.270-51"
+                                    },
+                                    {
+                                        "id": "31401738-0d60-47e3-90c7-a296aea6e85b",
+                                        "name": "Juliana Ventura Fernandes",
+                                        "cpf": "361.386.640-43"
+                                    }
+                                ]
                             }
                         }
                     }
                 },
-                "description": "Representa um paciente da clínica - utilizado no request da consulta do objeto de coleção"
+                "description": "Representa um paciente da clínica - utilizado no response da consulta do objeto de coleção"
             },
             "ErrorResponse-400-BadRequest": {
                 "content": {

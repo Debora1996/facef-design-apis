@@ -1,5 +1,7 @@
 # Configurando Data Types em requests no OpenAPI
 
+## Preview do resultado final:
+
 1 - Abra a ferramenta:
 https://www.apicur.io/apicurito/
 
@@ -21,7 +23,7 @@ A partir do OpenAPI gerado no exercício anterior:
 
 ### Etapa 1 - Configuração do corpo do request para POST /patients
 
-* Na parte esquerda da tela, na seção PATHS, clique no path /patients
+* Na parte esquerda da tela, na seção PATHS, clique no path `/patients`
 * Na parte direita da tela, certifique-se que a operação POST esteja selecionada
 * Na seção REQUEST BODY, clique em `Add a request body`
 * No campo Description, preencha: `Request para criação de pacientes`
@@ -33,14 +35,23 @@ A partir do OpenAPI gerado no exercício anterior:
 * Preencha o campo `Name` com: `PatientsRequestExample`
 ```
 {
-    "name": "Peter Parker",
-    "cpf": "123.789.012-34",
-    "phone_number": "1691234-5789",
+    "name": "Marcio Andrade",
+    "cpf": "123.345.789-0",
+    "phone_number": "11-91111-4394",
     "birthdate": "2001-08-10",
-    "height": 1.78,
-    "weight": 76,
+    "height": {
+        "value": 1.78,
+        "unit": "m"
+    },
+    "weight": {
+        "value": 80,
+        "unit": "kg"
+    },
     "smoker": false,
-    "comorbidities": ["Cirrose hepática", "Valvopatia"],
+    "comorbidities": [
+        "Cirrose hepática",
+        "Valvopatia"
+    ],
     "medical_insurance": {
         "id": "324.5231100.3432",
         "operator_code": "AMIL"
@@ -58,7 +69,7 @@ A partir do OpenAPI gerado no exercício anterior:
 
 ### Etapa 2 - Configuração do corpo do request para PUT /patients/{id}
 
-* Na parte esquerda da tela, na seção PATHS, clique no path /patients/{id}
+* Na parte esquerda da tela, na seção PATHS, clique no path `/patients/{id}`
 * Na parte direita da tela, certifique-se que a operação PUT esteja selecionada
 * Na seção REQUEST BODY, clique em `Add a request body`
 * No campo Description, preencha: `Request para atualização de pacientes`
@@ -70,14 +81,24 @@ A partir do OpenAPI gerado no exercício anterior:
 * Preencha o campo `Name` com: `PatientsRequestExample`
 ```
 {
-    "name": "Peter Parker",
-    "cpf": "123.789.012-34",
-    "phone_number": "1691234-5789",
+    "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+    "name": "Marcio Andrade",
+    "cpf": "123.345.789-0",
+    "phone_number": "11-91111-4394",
     "birthdate": "2001-08-10",
-    "height": 1.78,
-    "weight": 76,
+    "height": {
+        "value": 1.78,
+        "unit": "m"
+    },
+    "weight": {
+        "value": 80,
+        "unit": "kg"
+    },
     "smoker": false,
-    "comorbidities": ["Cirrose hepática", "Valvopatia"],
+    "comorbidities": [
+        "Cirrose hepática",
+        "Valvopatia"
+    ],
     "medical_insurance": {
         "id": "324.5231100.3432",
         "operator_code": "AMIL"
@@ -95,7 +116,7 @@ A partir do OpenAPI gerado no exercício anterior:
 
 ### Etapa 3 - Configuração do corpo do request para PATCH /patients/{id}
 
-* Na parte esquerda da tela, na seção PATHS, clique no path /patients/{id}
+* Na parte esquerda da tela, na seção PATHS, clique no path `/patients/{id}`
 * Na parte direita da tela, certifique-se que a operação PATCH esteja selecionada
 * Na seção REQUEST BODY, clique em `Add a request body`
 * No campo Description, preencha: `Request para atualização de pacientes`
@@ -107,14 +128,24 @@ A partir do OpenAPI gerado no exercício anterior:
 * Preencha o campo `Name` com: `PatientsRequestExample`
 ```
 {
-    "name": "Peter Parker",
-    "cpf": "123.789.012-34",
-    "phone_number": "1691234-5789",
+    "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+    "name": "Marcio Andrade",
+    "cpf": "123.345.789-0",
+    "phone_number": "11-91111-4394",
     "birthdate": "2001-08-10",
-    "height": 1.78,
-    "weight": 76,
+    "height": {
+        "value": 1.78,
+        "unit": "m"
+    },
+    "weight": {
+        "value": 80,
+        "unit": "kg"
+    },
     "smoker": false,
-    "comorbidities": ["Cirrose hepática", "Valvopatia"],
+    "comorbidities": [
+        "Cirrose hepática",
+        "Valvopatia"
+    ],
     "medical_insurance": {
         "id": "324.5231100.3432",
         "operator_code": "AMIL"

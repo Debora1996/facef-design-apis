@@ -1,5 +1,7 @@
 # Exercício - DataType de Erro
 
+## Preview do resultado final:
+
 1 - Abra a ferramenta:
 https://www.apicur.io/apicurito/
 
@@ -43,7 +45,7 @@ Nome | Descrição | Obrigatoriedade | Tipo
 ------|--------|--------|--------
 description | Descrição do erro | Required | String as String
 field | Nome do campo que causou o erro | Not Required | String as String
-issue | Código do erro | Required | String as String
+issue | Código identificador específico para o cenário de erro | Required | String as String
 location | Localização do campo que causou o erro | Not Required | String as String
 value | Valor do campo que causou o erro | Not Required | String as String
 

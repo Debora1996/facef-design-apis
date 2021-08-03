@@ -74,6 +74,54 @@
     },
     "components": {
         "schemas": {
+            "Height": {
+                "title": "Root Type for Height",
+                "description": "Objeto que representa a altura de uma pessoa",
+                "required": [
+                    "unit",
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "format": "double",
+                        "description": "Valor da medida de altura de uma pessoa",
+                        "type": "number"
+                    },
+                    "unit": {
+                        "description": "Unidade de medida da altura",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "value": 1.78,
+                    "unit": "m"
+                }
+            },
+            "Weight": {
+                "title": "Root Type for Weight",
+                "description": "Objeto que representa o peso de uma pessoa",
+                "required": [
+                    "unit",
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "format": "double",
+                        "description": "Valor da medida de peso de uma pessoa",
+                        "type": "number"
+                    },
+                    "unit": {
+                        "description": "Unidade de medida do peso",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "value": 1.78,
+                    "unit": "m"
+                }
+            },
             "MedicalInsurance": {
                 "title": "Root Type for MedicalInsurance",
                 "description": "Objeto que representa o plano de saúde de um paciente",
@@ -180,14 +228,30 @@
                         "type": "string"
                     },
                     "height": {
-                        "format": "double",
+                        "$ref": "#/components/schemas/Height",
                         "description": "Altura do paciente",
-                        "type": "number"
+                        "properties": {
+                            "value": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "weight": {
-                        "format": "int32",
+                        "$ref": "#/components/schemas/Weight",
                         "description": "Peso do paciente",
-                        "type": "integer"
+                        "properties": {
+                            "value": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "smoker": {
                         "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
@@ -238,13 +302,19 @@
                     }
                 },
                 "example": {
-                    "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
-                    "name": "Peter Parker",
-                    "cpf": "123.789.012-34",
-                    "phone_number": "1691234-5789",
+                    "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+                    "name": "Marcio Andrade",
+                    "cpf": "123.345.789-0",
+                    "phone_number": "11-91111-4394",
                     "birthdate": "2001-08-10",
-                    "height": 1.78,
-                    "weight": 76,
+                    "height": {
+                        "value": 1.78,
+                        "unit": "m"
+                    },
+                    "weight": {
+                        "value": 80,
+                        "unit": "kg"
+                    },
                     "smoker": false,
                     "comorbidities": [
                         "Cirrose hepática",
@@ -264,9 +334,38 @@
                     }
                 }
             },
+            "PatientsResponseList": {
+                "title": "Root Type for PatientsResponse",
+                "description": "Representa uma lista de pacientes da clínica - utilizado no response da consulta do objeto de coleção",
+                "required": [
+                    "cpf",
+                    "id",
+                    "name"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "Código único identificador do paciente",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Nome completo do paciente",
+                        "type": "string"
+                    },
+                    "cpf": {
+                        "description": "Documento de identificação do paciente - CPF",
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+                    "name": "Marcio Andrade",
+                    "cpf": "123.345.789-0"
+                }
+            },
             "PatientsRequest": {
                 "title": "Root Type for PatientsResponse",
-                "description": "Representa um paciente da clínica - utilizado no request da consulta do objeto de instância",
+                "description": "Representa um paciente da clínica - utilizado no request de criação do objeto de instância",
                 "required": [
                     "address",
                     "birthdate",
@@ -296,14 +395,30 @@
                         "type": "string"
                     },
                     "height": {
-                        "format": "double",
+                        "$ref": "#/components/schemas/Height",
                         "description": "Altura do paciente",
-                        "type": "number"
+                        "properties": {
+                            "value": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "weight": {
-                        "format": "int32",
+                        "$ref": "#/components/schemas/Weight",
                         "description": "Peso do paciente",
-                        "type": "integer"
+                        "properties": {
+                            "value": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "smoker": {
                         "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
@@ -354,12 +469,18 @@
                     }
                 },
                 "example": {
-                    "name": "Peter Parker",
-                    "cpf": "123.789.012-34",
-                    "phone_number": "1691234-5789",
+                    "name": "Marcio Andrade",
+                    "cpf": "123.345.789-0",
+                    "phone_number": "11-91111-4394",
                     "birthdate": "2001-08-10",
-                    "height": 1.78,
-                    "weight": 76,
+                    "height": {
+                        "value": 1.78,
+                        "unit": "m"
+                    },
+                    "weight": {
+                        "value": 80,
+                        "unit": "kg"
+                    },
                     "smoker": false,
                     "comorbidities": [
                         "Cirrose hepática",
@@ -379,38 +500,9 @@
                     }
                 }
             },
-            "PatientsResponseList": {
-                "title": "Root Type for PatientsResponse",
-                "description": "Representa um paciente da clínica - utilizado no request da consulta do objeto de coleção",
-                "required": [
-                    "cpf",
-                    "id",
-                    "name"
-                ],
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "description": "Código único identificador do paciente",
-                        "type": "string"
-                    },
-                    "name": {
-                        "description": "Nome completo do paciente",
-                        "type": "string"
-                    },
-                    "cpf": {
-                        "description": "Documento de identificação do paciente - CPF",
-                        "type": "string"
-                    }
-                },
-                "example": {
-                    "id": "91aa9c65-1b5b-492c-905c-449677b390e1",
-                    "name": "Peter Parker",
-                    "cpf": "123.789.012-34"
-                }
-            },
             "PatientsRequestPatch": {
                 "title": "Root Type for PatientsResponse",
-                "description": "Representa um paciente da clínica - utilizado no request da consulta do objeto de instância (específico para operação PATCH)",
+                "description": "Representa um paciente da clínica - utilizado no request de alteração do objeto de instância (específico para operação PATCH)",
                 "required": [],
                 "type": "object",
                 "properties": {
@@ -432,14 +524,30 @@
                         "type": "string"
                     },
                     "height": {
-                        "format": "double",
+                        "$ref": "#/components/schemas/Height",
                         "description": "Altura do paciente",
-                        "type": "number"
+                        "properties": {
+                            "value": {
+                                "format": "double",
+                                "type": "number"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "weight": {
-                        "format": "int32",
+                        "$ref": "#/components/schemas/Weight",
                         "description": "Peso do paciente",
-                        "type": "integer"
+                        "properties": {
+                            "value": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "unit": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "smoker": {
                         "description": "Indica se o paciente é fumante (true-Sim, false-Não)",
@@ -490,12 +598,18 @@
                     }
                 },
                 "example": {
-                    "name": "Peter Parker",
-                    "cpf": "123.789.012-34",
-                    "phone_number": "1691234-5789",
+                    "name": "Marcio Andrade",
+                    "cpf": "123.345.789-0",
+                    "phone_number": "11-91111-4394",
                     "birthdate": "2001-08-10",
-                    "height": 1.78,
-                    "weight": 76,
+                    "height": {
+                        "value": 1.78,
+                        "unit": "m"
+                    },
+                    "weight": {
+                        "value": 80,
+                        "unit": "kg"
+                    },
                     "smoker": false,
                     "comorbidities": [
                         "Cirrose hepática",
@@ -516,5 +630,5 @@
                 }
             }
         }
-    }    
+    }
 }

@@ -1,5 +1,7 @@
 # Exercício - Verbos HTTP
 
+## Preview do resultado final:
+
 1 - Abra a ferramenta:
 https://www.apicur.io/apicurito/
 

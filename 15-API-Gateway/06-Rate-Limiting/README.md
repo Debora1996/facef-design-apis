@@ -6,12 +6,12 @@
 
 (Linux ou MacOS)
 ```
-cp $FACEF_DESIGN_APIS/15-API-Gateway/05-Rate-Limiting/kong.yml .
+cp $FACEF_DESIGN_APIS/15-API-Gateway/06-Rate-Limiting/kong.yml .
 ```
 
 (Windows)
 ```
-cp %FACEF_DESIGN_APIS\15-API-Gateway\05-Rate-Limiting\kong.yml .
+cp %FACEF_DESIGN_APIS\15-API-Gateway\06-Rate-Limiting\kong.yml .
 ```
 
 ## Atividade 2 - Reiniciar o Kong
@@ -21,11 +21,11 @@ Executar no terminal:
 docker container restart kong
 ```
 
-## Atividade 3 - Invocar a API de consulta de médico 3 vezes seguidas
+## Atividade 3 - Invocar a API de consulta de paciente 3 vezes seguidas
 
 ### Opção 1 - A partir do Postman
 
-- A partir do Postman , executar repetidas vezes o request a partir de `Facef-Design-APIs / Kong / 05-Rate-Limiting / Doctors by ID`
+- A partir do Postman , executar repetidas vezes o request a partir de `Facef-Design-APIs / Gateway / 01-Setup-Kong / Get Patient by ID`
 
 - A partir da quarta chamada o resultado deve ser:
 
@@ -36,7 +36,7 @@ docker container restart kong
 - Executar o comando abaixo seguidas vezes:
 
 ```
-curl -v http://localhost:8000/v1/doctors/1
+curl -v GET 'http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1'
 ```
 
 - A partir da quarta chamada o resultado deve ser:

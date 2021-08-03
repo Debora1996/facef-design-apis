@@ -25,19 +25,17 @@ docker container restart kong
 
 ### Opção 1 - A partir do Postman
 
-- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Kong / 03-Correlation-ID / Doctors by ID`
+- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Gateway / 01-Setup-Kong / Get Patient by ID`
 
-- O resultado deve ser:
-
+- O resultado deve conter o header `Kong-Request-ID`, conforme o exemplo abaixo:
 ![print_postman.png](print_postman.png)
 
 ### Opção 2 - A partir do curl
 
-Invocar a API de consulta de médico:
+Invocar a API de consulta de paciente:
 ```
-curl -v http://localhost:8000/v1/doctors/1
+curl -v GET 'http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1'
 ```
 
-Deve haver um header Kong-Request-ID. Ex:
-
+- O resultado deve conter o header `Kong-Request-ID`, conforme o exemplo abaixo:
 ![print_curl.png](print_curl.png)

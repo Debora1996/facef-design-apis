@@ -1,5 +1,7 @@
 # Exercício - Ordenação
 
+## Preview do resultado final:
+
 1 - Abra a ferramenta:
 https://www.apicur.io/apicurito/
 
@@ -20,7 +22,7 @@ A partir do OpenAPI gerado no exercício anterior:
 ### Etapa 1 - Configuração de parâmetro de ordenação para coleção de pacientes
 
 * Na parte esquerda da tela, na seção Paths, clique em `/patients`
-* Na parte direita da tela, confirme a seleção do verbo Get
+* Na parte direita da tela, confirme a seleção do verbo `Get`
 * Na seção QUERY PARAMETERS, para cada um dos campos abaixo:
 * Clique no botão `+` e preencha:
 

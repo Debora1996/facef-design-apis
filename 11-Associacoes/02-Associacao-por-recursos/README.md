@@ -1,5 +1,7 @@
 # Exercício - Associação por recursos
 
+## Preview do resultado final:
+
 1 - Abra a ferramenta:
 https://www.apicur.io/apicurito/
 
@@ -15,15 +17,39 @@ https://www.apicur.io/apicurito/
 
 ## Passo a Passo:
 
-### Etapa 1 - Criação do Data Type Specialities - Request
+### Etapa 1 - Criação do OpenAPI (Doctors)
+
+1 - Abra a ferramenta:
+https://www.apicur.io/apicurito/
+
+2 - Clique em "Try Live"
+
+3 - Na próxima tela, clique em "New API"
+
+4 - Na tela principal:
+* Na parte superior da tela, clique no lápis ao lado da palavra "New API" e digite o nome da entidade de negócio:
+````
+Doctors
+````
+
+* No lado direito da tela, a partir da seção INFO, clique no valor do campo "Description" e fale do que se trata o seu contrato:
+````
+ProHealth - Contrato da API de Médicos
+````
+
+* Na seção SERVERS, clique em Add a server
+    * No campo Server URL, preencha com: http://localhost:8080 - clique em Apply - clique em Save
+
+
+### Etapa 2 - Criação do Data Type Specialities - Request
 
 Na parte à esquerda da tela, na seção Data Types, clique no botão `+`
 * Em 1. Enter Basic Information, preencha no campo Name: `SpecialitiesRequest`
-* Em description, preencha: `Objeto que representa o código de uma especialidade médica`
+* Em description, preencha: `Objeto que representa o código de uma especialidade médica - a ser enviado no corpo do request`
 * Em 2. Enter JSON Example, preencha:
 ```
 {
-    "id": "50"
+    "id": "9ed9a468-e882-4f16-a6bd-11fb0d65d305"
 }
 ```
 * Em 3. Choose to create a REST Resource with the Data Type, mantenha a opção `No Resource`
@@ -36,15 +62,15 @@ Nome | Descrição | Obrigatoriedade | Tipo
 ------|--------|--------|--------
 id | Código da especialidade médica | Required | String as String
 
-### Etapa 2 - Criação do Data Type Specialities - Response
+### Etapa 3 - Criação do Data Type Specialities - Response
 
 Na parte à esquerda da tela, na seção Data Types, clique no botão `+`
 * Em 1. Enter Basic Information, preencha no campo Name: `SpecialitiesResponse`
-* Em description, preencha: `Objeto que representa uma especialidade médica`
+* Em description, preencha: `Objeto que representa uma especialidade médica - a ser enviado no corpo do response`
 * Em 2. Enter JSON Example, preencha:
 ```
 {
-    "id": "50",
+    "id": "9ed9a468-e882-4f16-a6bd-11fb0d65d305",
     "name": "Cardiologia",
     "description": "Cardiologia é a especialidade médica que se ocupa do diagnóstico e tratamento das doenças que acometem o coração bem como os outros componentes do sistema circulatório"
 }
@@ -62,7 +88,7 @@ description | Descrição da especialidade médica | Required | String as String
 id | Código da especialidade médica | Required | String as String
 name | Nome da especialidade médica | Required | String as String
 
-### Etapa 3 - Criação do Response
+### Etapa 4 - Criação do Response
 
 Na parte à esquerda da tela, na seção Responses, clique no botão `+`
 * Em 1. Enter Basic Information, preencha no campo Name: `SpecialitiesResponse`
@@ -75,13 +101,13 @@ Na parte à esquerda da tela, na seção Responses, clique no botão `+`
 * No campo Name preencha: `SpecialitiesExample`. No campo abaixo preencha:
 ```
 {
-    "id": "50",
+    "id": "9ed9a468-e882-4f16-a6bd-11fb0d65d305",
     "name": "Cardiologia",
     "description": "Cardiologia é a especialidade médica que se ocupa do diagnóstico e tratamento das doenças que acometem o coração bem como os outros componentes do sistema circulatório"
 }
 ```
 
-### Etapa 4 - Criação da rota de consulta de especialidades
+### Etapa 5 - Criação da rota de consulta de especialidades
 
 Na parte à esquerda da tela, na seção Paths, clique no botão `+`
 * No campo Path, preencha: `/v1/doctors/{id}/specialities` - clique no botão `Add`
@@ -91,7 +117,7 @@ Na parte à esquerda da tela, na seção Paths, clique no botão `+`
 * Clique em `No description`: `Campo identificador do Médico`
 * Clique em `No Type` - `Type`: `String`
 
-### Etapa 5 - Definição de verbos para a consulta de especialidades
+### Etapa 6 - Definição de verbos para a consulta de especialidades
 
 A partir da rota `/v1/doctors/{id}/specialities`:
 
@@ -104,35 +130,13 @@ A partir da rota `/v1/doctors/{id}/specialities`:
 
     Seção RESPONSES:
     Clique em `Add a response` -> 200 OK
-    Description: `Response para consulta das especialidades de um médico`
-    Clique em `Add a media type` -> `application/json` -> add
-    Clique em `No Type` -> Type: SpecialitiesResponse
-    Clique em `No examples defined` -> `Add an example` -> Name: `SpecialitiesResponseExample`
-    ```
-    {
-        "id": "50",
-        "name": "Cardiologia",
-        "description": "Cardiologia é a especialidade médica que se ocupa do diagnóstico e tratamento das doenças que acometem o coração bem como os outros componentes do sistema circulatório"
-    }
-    ```
-    Clique em `Add`
+    Em Response Definition (optional) -> `SpecialitiesResponse` -> Add
+
+    Obs: os demais códigos de retorno (4xx, 5xx) devem ser adicionados, assim como foi feito para o contrato da API de Pacientes
 
 * Para os verbos Put, Patch e Delete -> Add Operation
 
-    Na seção RESPONSES, clique no botão `+`
-    Selecione o Response Status Code `405 Method Not Allowed` e clique em `Add`
-    Preencha o campo Description: `Response para erro 405 - Method Not Allowed`
-    No campo Response Body, clique em `Add a media type`
-    Mantenha a opção `application/json` selecionada e clique em `Add`
-    Clique em `No Type` - selecione o Type `ErrorMessage`
-    Clique em `No example` - em seguida em `Add a example`
-    Preencha o campo `Name` com o nome do exemplo: `MethodNotAllowedExample`
-    ```
-    {
-        "issue" : "METHOD_NOT_SUPPORTED",
-        "description": "Invalid path and HTTP method combination"
-    }
-    ```
+    Obs: Essas operações deverão retornar código HTTP 405, assim como foi feito para o contrato da API de Pacientes.
 
 * Post -> Add Operation
     Seção INFO:
@@ -144,25 +148,16 @@ A partir da rota `/v1/doctors/{id}/specialities`:
     Description: `Request para adicionar uma especialidade a um médico`
     It is `Required` that clients include the request body
     Clique em `Add a media type` -> `application/json` -> add
-    Clique em `No Type` -> Type: SpecialitiesRequest
+    Clique em `No Type` -> Type: `SpecialitiesRequest`
     Clique em `No examples defined` -> `Add an example` -> Name: `SpecialitiesRequestExample`
     ```
     {
-        "id": "50"
+        "id": "9ed9a468-e882-4f16-a6bd-11fb0d65d305"
     }
     ```
 
     Seção RESPONSES:
     Clique em `Add a response` -> 200 OK
-    Description: `Response para adição de especialidades a um médico`
-    Clique em `Add a media type` -> `application/json` -> add
-    Clique em `No Type` -> Type: `SpecialitiesResponse`
-    Clique em `No examples defined` -> `Add an example` -> Name: `SpecialitiesResponseExample`
-    ```
-    {
-        "id": "50",
-        "name": "Cardiologia",
-        "description": "Cardiologia é a especialidade médica que se ocupa do diagnóstico e tratamento das doenças que acometem o coração bem como os outros componentes do sistema circulatório"
-    }
-    ```
-    Clique em `Add`    
+    Em Response Definition (optional) -> `SpecialitiesResponse` -> Add
+
+    Obs: os demais códigos de retorno (4xx, 5xx) devem ser adicionados, assim como foi feito para o contrato da API de Pacientes

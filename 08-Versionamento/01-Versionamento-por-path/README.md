@@ -1,5 +1,7 @@
 # Exercício - Versionamento por path
 
+## Preview do resultado final:
+
 1 - Abra a ferramenta:
 https://www.apicur.io/apicurito/
 

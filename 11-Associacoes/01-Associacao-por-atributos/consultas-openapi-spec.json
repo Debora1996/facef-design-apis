@@ -3,14 +3,38 @@
     "info": {
         "title": "Consultas",
         "version": "1.0.0",
-        "description": "A brand new API with no content.  Go nuts!"
+        "description": "ProHealth - Contrato da API de consultas médicas"
     },
+    "servers": [
+        {
+            "url": "http://localhost:8080",
+            "description": ""
+        }
+    ],
     "paths": {
-        "/v1/appointments": {
-            "summary": "Este recurso é a representação das consultas marcadas na clínica"
-        },
         "/v1/appointments/{id}": {
-            "description": "Este recurso é a representação de cada consulta marcada a partir do controle de agendamento da clínica"
+            "summary": "Rota de consultas médicos",
+            "description": "Este recurso é a representação da lista de consultas médicos da clínica",
+            "get": {
+                "responses": {
+                    "200": {
+                        "$ref": "#/components/responses/AppointmentResponse"
+                    }
+                },
+                "summary": "Operação de Consultas médicas",
+                "description": "Operação utilizada para obter uma consulta médica marcada"
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "description": "Campo identificador da consulta médico",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "in": "path",
+                    "required": true
+                }
+            ]
         }
     },
     "components": {
@@ -19,9 +43,10 @@
                 "title": "Root Type for Patient",
                 "description": "Objeto que representa um paciente da clínica",
                 "required": [
+                    "cpf",
                     "id",
-                    "phone_number",
-                    "name"
+                    "name",
+                    "phone_number"
                 ],
                 "type": "object",
                 "properties": {
@@ -30,7 +55,11 @@
                         "type": "string"
                     },
                     "name": {
-                        "description": "Nome do paciente",
+                        "description": "Nome completo do paciente",
+                        "type": "string"
+                    },
+                    "cpf": {
+                        "description": "Documento de identificação do paciente - CPF",
                         "type": "string"
                     },
                     "phone_number": {
@@ -39,15 +68,17 @@
                     }
                 },
                 "example": {
-                    "id": "503",
+                    "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
                     "name": "Marcio Andrade",
-                    "phone_number": "92233-4394"
+                    "cpf": "123.345.789-0",
+                    "phone_number": "11-91111-4394"
                 }
             },
             "Doctor": {
                 "title": "Root Type for Doctor",
                 "description": "Objeto que representa um médico da clínica",
                 "required": [
+                    "crm",
                     "id",
                     "name",
                     "phone_number"
@@ -62,15 +93,20 @@
                         "description": "Nome completo do médico",
                         "type": "string"
                     },
+                    "crm": {
+                        "description": "Registro no Conselho Regional de Medicina",
+                        "type": "string"
+                    },
                     "phone_number": {
                         "description": "Número de telefone do médico",
                         "type": "string"
                     }
                 },
                 "example": {
-                    "id": "25",
-                    "name": " ngelo Calafiori ",
-                    "phone_number": "91502-5501"
+                    "id": "44ce5e16-0acf-4b21-91aa-f8610f247cbb",
+                    "name": "José Eduardo Sousa",
+                    "crm": "008.321.111-0",
+                    "phone_number": "(11)92222-5501"
                 }
             },
             "AppointmentResponse": {
@@ -78,16 +114,15 @@
                 "description": "Objeto que representa uma consulta marcada",
                 "required": [
                     "doctor",
+                    "id",
                     "patient",
-                    "scheduled_at",
-                    "id"
+                    "scheduled_at"
                 ],
                 "type": "object",
                 "properties": {
                     "id": {
-                        "format": "int32",
                         "description": "Código identificador da consulta",
-                        "type": "integer"
+                        "type": "string"
                     },
                     "scheduled_at": {
                         "format": "date-time",
@@ -102,6 +137,9 @@
                                 "type": "string"
                             },
                             "name": {
+                                "type": "string"
+                            },
+                            "cpf": {
                                 "type": "string"
                             },
                             "phone_number": {
@@ -119,6 +157,9 @@
                             "name": {
                                 "type": "string"
                             },
+                            "crm": {
+                                "type": "string"
+                            },
                             "phone_number": {
                                 "type": "string"
                             }
@@ -126,19 +167,53 @@
                     }
                 },
                 "example": {
-                    "id": 8201,
+                    "id": "ba20f18f-4797-4e39-8502-e63be9929b96",
                     "scheduled_at": "2020-12-23T07:23:00Z",
                     "patient": {
-                        "id": "503",
+                        "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
                         "name": "Marcio Andrade",
-                        "phone_number": "92233-4394"
+                        "cpf": "123.345.789-0",
+                        "phone_number": "11-91111-4394"
                     },
                     "doctor": {
-                        "id": "25",
-                        "name": " ngelo Calafiori ",
-                        "phone_number": "91502-5501"
+                        "id": "44ce5e16-0acf-4b21-91aa-f8610f247cbb",
+                        "name": "José Eduardo Sousa",
+                        "crm": "008.321.111-0",
+                        "phone_number": "(11)92222-5501"
                     }
                 }
+            }
+        },
+        "responses": {
+            "AppointmentResponse": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/AppointmentResponse"
+                        },
+                        "examples": {
+                            "AppointmentExample": {
+                                "value": {
+                                    "id": "ba20f18f-4797-4e39-8502-e63be9929b96",
+                                    "scheduled_at": "2020-12-23T07:23:00Z",
+                                    "patient": {
+                                        "id": "3dc97efc-1b5b-492c-905c-449677b390e1",
+                                        "name": "Marcio Andrade",
+                                        "cpf": "123.345.789-0",
+                                        "phone_number": "11-91111-4394"
+                                    },
+                                    "doctor": {
+                                        "id": "44ce5e16-0acf-4b21-91aa-f8610f247cbb",
+                                        "name": "José Eduardo Sousa",
+                                        "crm": "008.321.111-0",
+                                        "phone_number": "(11)92222-5501"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "description": "Entidade de consulta médica retornada no response"
             }
         }
     }

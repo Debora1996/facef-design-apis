@@ -11,9 +11,9 @@ docker network create kong-net
 
 ## Atividade 2 - Inclusão do backend na rede
 
-- Adicionar o backend de doctors nessa rede:
+- Adicionar o backend de patients nessa rede:
 ```
-docker network connect kong-net facef-design-apis-doctors
+docker network connect kong-net facef-design-apis-patients
 ```
 
 ## Atividade 3 - Setando variável de ambiente para pasta do projeto
@@ -106,7 +106,7 @@ docker run -d --name kong \
 
 - Abra o Postman 
 
-- Execute o request a partir de `Facef-Design-APIs / Kong / 01-Setup-Kong / Doctors by ID`
+- Execute o request a partir de `Facef-Design-APIs / Gateway / 01-Setup-Kong / Get Patient by ID`
 
 - O resultado deve ser:
 
@@ -116,7 +116,7 @@ docker run -d --name kong \
 
 - A partir do terminal, execute o comando:
 ```
-curl -v http://localhost:8000/v1/doctors/1
+curl -v GET 'http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1'
 ```
 
 - O resultado deve ser:
