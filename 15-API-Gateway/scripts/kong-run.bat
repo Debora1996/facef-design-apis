@@ -9,12 +9,12 @@ set DECLARATIVE_CONFIG_RATE_LIMITING="..\06-Rate-Limiting"
 
 if "%~1" == "" ( call :die "1 argument required, $# provided" )
 if "%~1" == "setup-network" ( call :kong_setup_network )
-if "%~1" == "setup-kong" ( call :kong_setup $DECLARATIVE_CONFIG_SETUP )
-if "%~1" == "key-auth" ( call :kong_update $DECLARATIVE_CONFIG_AUTH )
-if "%~1" == "correlation-id" ( call :kong_update $DECLARATIVE_CONFIG_CORRELATION_ID )
-if "%~1" == "cache" ( call :kong_update $DECLARATIVE_CONFIG_CACHE )
-if "%~1" == "response-transformer" ( call :kong_update $DECLARATIVE_CONFIG_RESPONSE_TRANSFORMER )
-if "%~1" == "rate-limiting" ( call :kong_update $DECLARATIVE_CONFIG_RATE_LIMITING )
+if "%~1" == "setup-kong" ( call :kong_setup %DECLARATIVE_CONFIG_SETUP% )
+if "%~1" == "key-auth" ( call :kong_update %DECLARATIVE_CONFIG_AUTH% )
+if "%~1" == "correlation-id" ( call :kong_update %DECLARATIVE_CONFIG_CORRELATION_ID% )
+if "%~1" == "cache" ( call :kong_update %DECLARATIVE_CONFIG_CACHE% )
+if "%~1" == "response-transformer" ( call :kong_update %DECLARATIVE_CONFIG_RESPONSE_TRANSFORMER% )
+if "%~1" == "rate-limiting" ( call :kong_update %DECLARATIVE_CONFIG_RATE_LIMITING% )
 if "%~1" == "stop" ( call :kong_stop )
 if "%~1" == "remove" ( call :kong_remove )
 
