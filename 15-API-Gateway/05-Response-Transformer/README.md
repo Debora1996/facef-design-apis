@@ -1,10 +1,13 @@
 # Exercício 06 - Response Transformer
 
+Para a execução dessa atividade, espera-se que vc tenha executado previamente a atividade abaixo:
+`15-API-Gateway / 01-Setup-Kong`
+
 ## Atividade 1 - Consulta antes da transformação do response
 
 ### Opção 1 - A partir do Postman
 
-- A partir do Postman , executar o request a partir de `Facef-Design-APIs / Gateway / 01-Setup-Kong / Get Patient by ID`
+- A partir do Postman, executar o request a partir de `Facef-Design-APIs / Gateway / 01-Setup-Kong / Get Patient by ID`
 
 - O resultado deve ser:
 
@@ -22,27 +25,24 @@ curl 'http://localhost:8000/v1/patients/3dc97efc-1b5b-492c-905c-449677b390e1'
 
 ![print_curl_antes_transformacao.png](print_curl_antes_transformacao.png)
 
+
 ## Atividade 2 - Atualizar o Declarative Config
 
-- A partir da pasta do declarative config, executar:
+- Abra o terminal
 
-(Linux ou MacOS)
-```
-cp $FACEF_DESIGN_APIS/15-API-Gateway/05-Response-Transformer/kong.yml .
-```
+- A partir da pasta `15-API-Gateway / scripts`, execute os comandos :
 
-(Windows)
+(Linux ou MacOS):
 ```
-cp %FACEF_DESIGN_APIS\15-API-Gateway\05-Response-Transformerkong.yml .
+./kong-run.sh response-transformer
 ```
 
-## Atividade 3 - Reiniciar o Kong
+(Windows):
+```
+.\kong-run.bat response-transformer
+```
 
-Executar no terminal:
-```
-docker container restart kong
-```
-## Atividade 4 - Consulta depois da transformação do response
+## Atividade 3 - Consulta depois da transformação do response
 
 ### Opção 1 - A partir do Postman
 

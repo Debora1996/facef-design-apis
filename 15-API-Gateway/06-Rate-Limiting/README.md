@@ -1,27 +1,25 @@
 # Exercício 05 - Rate Limiting
 
+Para a execução dessa atividade, espera-se que vc tenha executado previamente a atividade abaixo:
+`15-API-Gateway / 01-Setup-Kong`
+
 ## Atividade 1 - Atualizar o Declarative Config
 
-- A partir da pasta do declarative config, executar:
+- Abra o terminal
 
-(Linux ou MacOS)
-```
-cp $FACEF_DESIGN_APIS/15-API-Gateway/06-Rate-Limiting/kong.yml .
-```
+- A partir da pasta `15-API-Gateway / scripts`, execute os comandos :
 
-(Windows)
+(Linux ou MacOS):
 ```
-cp %FACEF_DESIGN_APIS\15-API-Gateway\06-Rate-Limiting\kong.yml .
+./kong-run.sh rate-limiting
 ```
 
-## Atividade 2 - Reiniciar o Kong
-
-Executar no terminal:
+(Windows):
 ```
-docker container restart kong
+.\kong-run.bat rate-limiting
 ```
 
-## Atividade 3 - Invocar a API de consulta de paciente 3 vezes seguidas
+## Atividade 2 - Invocar a API de consulta de paciente 3 vezes seguidas
 
 ### Opção 1 - A partir do Postman
 

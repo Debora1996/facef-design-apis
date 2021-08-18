@@ -1,34 +1,28 @@
 # Exercício 01 - Setup do Kong
 
 Para a execução dessa atividade, espera-se que vc tenha executado previamente a atividade abaixo:
-14-Geracao-de-codigo / 02-Setup-Backend / README.md
+`14-Geracao-de-codigo / 02-Setup-Backend / README.md`
 
-## Atividade 1 - Setup da rede
+## Atividade 1 - Setup da rede e do gateway
 
 - Abra o terminal
 
-- Execute os comandos para criar a rede:
+- A partir da pasta `15-API-Gateway / scripts`, execute os comandos :
+
+(Linux ou MacOS):
 ```
-docker network create kong-net
-docker network connect kong-net facef-design-apis-patients
+chmod +x ./kong-run.sh
+./kong-run.sh setup-network
+./kong-run.sh setup-kong
 ```
 
-## Atividade 2 - Setup do kong Gateway
-
-- Acesse essa pasta pela linha de comando
-
-- Execute (Linux ou MacOS):
+(Windows):
 ```
-chmod +x ../kong-run.sh
-../kong-run.sh $PWD
+.\kong-run.bat setup-network
+.\kong-run.bat setup-kong
 ```
 
-- Execute (Windows):
-```
-..\kong-run.bat %cd%
-```
-
-## Atividade 3 - Testar o funcionamento da API exposta pelo Kong:
+## Atividade 2 - Testar o funcionamento da API exposta pelo Kong:
 
 ### Opção 1 - A partir do Postman
 

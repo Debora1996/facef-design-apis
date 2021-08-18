@@ -1,24 +1,22 @@
 # Exercício 02 - Key Authentication
 
+Para a execução dessa atividade, espera-se que vc tenha executado previamente a atividade abaixo:
+`15-API-Gateway / 01-Setup-Kong`
+
 ## Atividade 1 - Atualizar o Declarative Config
 
-- Acesse essa pasta pela linha de comando
+- Abra o terminal
 
-- Execute (Linux ou MacOS):
-```
-../kong-run.sh $PWD
-```
+- A partir da pasta `15-API-Gateway / scripts`, execute os comandos :
 
-- Execute (Windows):
+(Linux ou MacOS):
 ```
-..\kong-run.bat %cd%
+./kong-run.sh key-auth
 ```
 
-## Atividade 2 - Reiniciar o Kong
-
-- Executar no terminal:
+(Windows):
 ```
-docker container restart kong
+.\kong-run.bat key-auth
 ```
 
 ## Atividade 2 - Invocar a API sem as credenciais

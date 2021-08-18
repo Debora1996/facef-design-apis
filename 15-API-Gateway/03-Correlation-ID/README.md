@@ -1,27 +1,25 @@
 # Exercício 03 - Correlation ID
 
+Para a execução dessa atividade, espera-se que vc tenha executado previamente a atividade abaixo:
+`15-API-Gateway / 01-Setup-Kong`
+
 ## Atividade 1 - Atualizar o Declarative Config
 
-- A partir da pasta do declarative config, executar:
+- Abra o terminal
 
-(Linux ou MacOS)
-```
-cp $FACEF_DESIGN_APIS/15-API-Gateway/03-Correlation-ID/kong.yml .
-```
+- A partir da pasta `15-API-Gateway / scripts`, execute os comandos :
 
-(Windows)
+(Linux ou MacOS):
 ```
-cp %FACEF_DESIGN_APIS\15-API-Gateway\03-Correlation-ID\kong.yml .
+./kong-run.sh correlation-id
 ```
 
-## Atividade 2 - Reiniciar o Kong
-
-Executar no terminal:
+(Windows):
 ```
-docker container restart kong
+.\kong-run.bat correlation-id
 ```
 
-## Atividade 3 - Testar a chamada da API
+## Atividade 2 - Testar a chamada da API
 
 ### Opção 1 - A partir do Postman
 
