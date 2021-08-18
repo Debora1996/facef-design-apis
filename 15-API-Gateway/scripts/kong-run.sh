@@ -53,6 +53,19 @@ kong_remove() {
     docker container rm kong
 }
 
+clean_all() {
+    echo "cleaning..."
+    rm kong.yml
+    docker container stop kong
+    docker container rm kong
+    docker container stop facef-design-apis-patients
+    docker container rm facef-design-apis-patients
+    docker network rm kong-net
+    docker image rm marcelofelixsalgado/facef-design-apis-patients:latest
+    docker image rm kong:latest
+}
+
+
 [ "$#" -eq 1 ] || die "1 argument required, $# provided"
 
 case "$1" in
@@ -65,6 +78,7 @@ case "$1" in
     "rate-limiting") kong_update $DECLARATIVE_CONFIG_RATE_LIMITING ;;
     "stop") kong_stop ;;
     "remove") kong_remove ;;
+    "clean-all") clean_all ;;
 	*) 
         echo "Invalid argument value"
         exit 1 ;;

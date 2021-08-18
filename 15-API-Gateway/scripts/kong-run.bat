@@ -17,6 +17,7 @@ if "%~1" == "response-transformer" ( call :kong_update %DECLARATIVE_CONFIG_RESPO
 if "%~1" == "rate-limiting" ( call :kong_update %DECLARATIVE_CONFIG_RATE_LIMITING% )
 if "%~1" == "stop" ( call :kong_stop )
 if "%~1" == "remove" ( call :kong_remove )
+if "%~1" == "clean-all" ( call :clean_all )
 
 exit /b 0
 
@@ -49,4 +50,16 @@ exit /b 0
 :kong_remove
 @echo "revoving kong..."
 docker container rm kong
+exit /b 0
+
+:clean_all
+@echo "cleaning..."
+del kong.yml
+docker container stop kong
+docker container rm kong
+docker container stop facef-design-apis-patients
+docker container rm facef-design-apis-patients
+docker network rm kong-net
+docker image rm marcelofelixsalgado/facef-design-apis-patients:latest
+docker image rm kong:latest
 exit /b 0
