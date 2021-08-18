@@ -46,7 +46,7 @@ exit /b 0
 docker container stop kong
 exit /b 0
 
-:kong_remove()
+:kong_remove
 @echo "revoving kong..."
 docker container rm kong
 exit /b 0
