@@ -5,9 +5,9 @@ Para a execução dessa atividade, espera-se que vc tenha executado previamente 
 
 ## Atividade 1 - Setup da rede
 
-- Abrir o terminal
+- Abra o terminal
 
-- Executar os comandos para criar a rede:
+- Execute os comandos para criar a rede:
 ```
 docker network create kong-net
 docker network connect kong-net facef-design-apis-patients
@@ -15,15 +15,17 @@ docker network connect kong-net facef-design-apis-patients
 
 ## Atividade 2 - Setup do kong Gateway
 
-- Executar (Linux ou MacOS):
+- Acesse essa pasta pela linha de comando
+
+- Execute (Linux ou MacOS):
 ```
 chmod +x ../kong-run.sh
 ../kong-run.sh $PWD
 ```
 
-- Executar (Windows):
+- Execute (Windows):
 ```
-
+..\kong-run.bat %cd%
 ```
 
 ## Atividade 3 - Testar o funcionamento da API exposta pelo Kong:

@@ -2,16 +2,16 @@
 
 ## Atividade 1 - Atualizar o Declarative Config
 
-- A partir da pasta do declarative config, executar:
+- Acesse essa pasta pela linha de comando
 
-(Linux ou MacOS)
+- Execute (Linux ou MacOS):
 ```
-cp $FACEF_DESIGN_APIS/15-API-Gateway/02-Key-Authentication/kong.yml .
+../kong-run.sh $PWD
 ```
 
-(Windows)
+- Execute (Windows):
 ```
-cp %FACEF_DESIGN_APIS\15-API-Gateway\02-Key-Authentication\kong.yml .
+..\kong-run.bat %cd%
 ```
 
 ## Atividade 2 - Reiniciar o Kong
